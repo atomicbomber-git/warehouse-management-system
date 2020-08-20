@@ -15,7 +15,7 @@ class BarangSeeder extends Seeder
     {
         DB::beginTransaction();
 
-        factory(Barang::class, 100)
+        factory(Barang::class, 50)
             ->create();
 
         DB::commit();

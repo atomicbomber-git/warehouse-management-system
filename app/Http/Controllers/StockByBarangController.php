@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Barang;
+use App\Pemasok;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Request;
 
@@ -21,9 +22,11 @@ class StockByBarangController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($barang)
     {
-        return $this->responseFactory->view("stock-by-barang.index");
+        return $this->responseFactory->view("stock-by-barang.index", [
+            "barang_id" => $barang
+        ]);
     }
 
     /**
@@ -31,9 +34,13 @@ class StockByBarangController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Barang $barang)
     {
-        //
+        return $this->responseFactory->view("stock-by-barang.create", [
+            "barang" => $barang,
+            "old_pemasok" => Pemasok::query()->find(old("pemasok_id")),
+            "old_barang" => Barang::query()->find(old("barang_id")),
+        ]);
     }
 
     /**
@@ -44,7 +51,9 @@ class StockByBarangController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            "nunu" => ["required"],
+        ]);
     }
 
     /**

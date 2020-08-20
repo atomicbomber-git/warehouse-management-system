@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\BarangSearchController;
 use App\Http\Controllers\PemasokController;
+use App\Http\Controllers\PemasokSearchController;
 use App\Http\Controllers\StockByBarangController;
+use App\Http\Controllers\StockController;
 use App\Http\Controllers\StockGroupedByBarangController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -30,6 +33,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource("pemasok-search", class_basename(PemasokSearchController::class))
+    ->only(["index"]);
+
+Route::resource("barang-search", class_basename(BarangSearchController::class))
+    ->only(["index"]);
+
 Route::resource("user", class_basename(UserController::class))
     ->except(["show", "destroy"]);
 
@@ -43,9 +52,10 @@ Route::resource("stock-grouped-by-barang", class_basename(StockGroupedByBarangCo
     ->parameter("stock-grouped-by-barang", "barang")
     ->only(["index"]);
 
-Route::resource("barang.stock-by-barang", class_basename(StockByBarangController::class))
-    ->parameter("stock-by-barang", "stock")
-    ->only(["index", "edit", "update", "delete"])
+Route::resource("stock-grouped-by-barang.stock-by-barang", class_basename(StockByBarangController::class))
+    ->parameters([
+        "stock-grouped-by-barang" => "barang",
+        "stock-by-barang" => "stock",
+    ])
+    ->except(["show"])
     ->shallow();
-
-Route::get('/home', 'HomeController@index')->name('home');

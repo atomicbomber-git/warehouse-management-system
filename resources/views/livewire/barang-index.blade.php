@@ -34,6 +34,10 @@
                             <td> {{ $barang->satuan }} </td>
                             <td class="text-right"> {{ Facades\App\Support\Formatter::currency($barang->harga_jual) }} </td>
                             <td class="text-center">
+                                <a href="{{ route("barang.edit", $barang)}}" class="btn btn-primary btn-sm">
+                                    Ubah
+                                </a>
+
                                 <button
                                         x-data="{}"
                                         x-on:click="

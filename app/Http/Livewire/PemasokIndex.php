@@ -6,9 +6,12 @@ use App\Constants\MessageState;
 use App\Pemasok;
 use App\Support\SessionHelper;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class PemasokIndex extends Component
 {
+    use WithPagination;
+
     protected $listeners = [
         "pemasok:delete" => "deletePemasok"
     ];

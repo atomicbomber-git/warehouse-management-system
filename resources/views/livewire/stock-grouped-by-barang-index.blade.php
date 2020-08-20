@@ -3,6 +3,8 @@
         Stock per Barang
     </h1>
 
+    <x-messages></x-messages>
+
     <div>
         @if($barangs->isNotEmpty())
             <div class="table-responsive">
@@ -27,7 +29,7 @@
                             <td class="text-center">
                                 <a
                                         class="btn btn-primary btn-sm"
-                                        href="{{ route("barang.stock-by-barang.index", $barang) }}">
+                                        href="{{ route("stock-grouped-by-barang.stock-by-barang.index", $barang) }}">
                                     Stock
                                 </a>
                             </td>

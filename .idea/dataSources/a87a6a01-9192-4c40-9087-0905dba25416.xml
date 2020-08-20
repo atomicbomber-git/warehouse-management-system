@@ -1460,14 +1460,14 @@ SELECT|sys.sys_config:null
       <DataType>double(19,2 digit) unsigned|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="445" parent="407" name="kadaluarsa_sebelum">
+    <column id="445" parent="407" name="tanggal_masuk">
       <Position>6</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="446" parent="407" name="status">
+    <column id="446" parent="407" name="tanggal_kadaluarsa">
       <Position>7</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="447" parent="407" name="created_at">
@@ -1486,12 +1486,12 @@ SELECT|sys.sys_config:null
       <ColNames>pemasok_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="451" parent="407" name="stock_kadaluarsa_sebelum_index">
-      <ColNames>kadaluarsa_sebelum</ColNames>
+    <index id="451" parent="407" name="stock_tanggal_masuk_index">
+      <ColNames>tanggal_masuk</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="452" parent="407" name="stock_status_index">
-      <ColNames>status</ColNames>
+    <index id="452" parent="407" name="stock_tanggal_kadaluarsa_index">
+      <ColNames>tanggal_kadaluarsa</ColNames>
       <Type>btree</Type>
     </index>
     <key id="453" parent="407" name="PRIMARY">

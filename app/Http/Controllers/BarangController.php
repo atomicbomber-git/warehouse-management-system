@@ -74,23 +74,14 @@ class BarangController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param Barang $barang
-     * @return Response
-     */
-    public function show(Barang $barang)
-    {
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
-     * @param Barang $barang
      * @return Response
      */
     public function edit(Barang $barang)
     {
+        $this->authorize(AuthServiceProvider::MANAGE_ANY_BARANG);
+
         return $this->responseFactory->view("barang.edit", [
             "barang" => $barang,
         ]);
@@ -101,21 +92,25 @@ class BarangController extends Controller
      *
      * @param Request $request
      * @param Barang $barang
-     * @return Response
+     * @return RedirectResponse
      */
     public function update(Request $request, Barang $barang)
     {
-        //
-    }
+        $this->authorize(AuthServiceProvider::MANAGE_ANY_BARANG);
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param Barang $barang
-     * @return Response
-     */
-    public function destroy(Barang $barang)
-    {
-        //
+        $data = $request->validate([
+            "nama" => ["required", "string", Rule::unique(Barang::class)->ignoreModel($barang)],
+            "satuan" => ["required", "string"],
+            "harga_jual" => ["required", "numeric", "gte:0"],
+        ]);
+
+        $barang->update($data);
+
+        SessionHelper::flashMessage(
+            __("messages.update.success"),
+            MessageState::STATE_SUCCESS,
+        );
+
+        return $this->responseFactory->redirectToRoute("barang.edit", $barang);
     }
 }

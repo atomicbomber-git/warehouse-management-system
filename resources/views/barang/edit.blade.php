@@ -11,6 +11,8 @@
         Ubah
     </h1>
 
+    <x-messages></x-messages>
+
     <div class="card">
         <div class="card-body">
             <form action="{{ route("barang.update", $barang) }}"

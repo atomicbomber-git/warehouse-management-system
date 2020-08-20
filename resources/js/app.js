@@ -4,10 +4,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-import Swal from "sweetalert2";
-
 require('./bootstrap');
 
+require("select2")
 window.Vue = require('vue');
 require("alpinejs")
 window.Swal = require("sweetalert2")
