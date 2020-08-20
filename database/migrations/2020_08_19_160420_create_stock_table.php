@@ -19,8 +19,8 @@ class CreateStockTable extends Migration
             $table->unsignedInteger('pemasok_id')->index();
             $table->unsignedDouble('jumlah', 19, 2);
             $table->unsignedDouble('harga_satuan', 19, 2);
-            $table->date('kadaluarsa_sebelum')->index();
-            $table->string('status')->index();
+            $table->date('tanggal_masuk')->index();
+            $table->date('tanggal_kadaluarsa')->index();
             $table->foreign('barang_id')->references('id')->on('barang');
             $table->foreign('pemasok_id')->references('id')->on('pemasok');
             $table->timestamps();

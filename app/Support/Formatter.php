@@ -13,6 +13,11 @@ class Formatter
         return "Rp. " . number_format($value);
     }
 
+    public function number($value)
+    {
+        return number_format($value);
+    }
+
     public function timeWithoutSeconds($value)
     {
         return app(DateFactory::class)

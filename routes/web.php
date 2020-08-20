@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\PemasokController;
+use App\Http\Controllers\StockByBarangController;
+use App\Http\Controllers\StockGroupedByBarangController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -37,5 +39,13 @@ Route::resource("barang", class_basename(BarangController::class))
 Route::resource("pemasok", class_basename(PemasokController::class))
     ->except(["show", "destroy"]);
 
+Route::resource("stock-grouped-by-barang", class_basename(StockGroupedByBarangController::class))
+    ->parameter("stock-grouped-by-barang", "barang")
+    ->only(["index"]);
+
+Route::resource("barang.stock-by-barang", class_basename(StockByBarangController::class))
+    ->parameter("stock-by-barang", "stock")
+    ->only(["index", "edit", "update", "delete"])
+    ->shallow();
 
 Route::get('/home', 'HomeController@index')->name('home');
