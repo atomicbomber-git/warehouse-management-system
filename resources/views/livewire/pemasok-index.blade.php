@@ -5,6 +5,12 @@
 
     <x-messages></x-messages>
 
+    <div class="d-flex justify-content-end py-3">
+        <a href="{{ route("pemasok.create") }}" class="btn btn-primary">
+            Tambah
+        </a>
+    </div>
+
     <div>
         @if($pemasoks->isNotEmpty())
             <div class="table-responsive">
@@ -13,7 +19,7 @@
                     <tr>
                         <th> #</th>
                         <th> Nama </th>
-                        <th> Alamat </th>
+                        <th style="width: 200px"> Alamat </th>
                         <th> No. Telepon </th>
                         <th class="text-center"> @lang("app.actions") </th>
                     </tr>
@@ -27,6 +33,10 @@
                             <td> {{ $pemasok->alamat }} </td>
                             <td> {{ $pemasok->no_telepon }} </td>
                             <td class="text-center">
+                                <a href="{{ route("pemasok.edit", $pemasok) }}" class="btn btn-primary btn-sm">
+                                    Ubah
+                                </a>
+
                                 <button
                                         x-data="{}"
                                         x-on:click="

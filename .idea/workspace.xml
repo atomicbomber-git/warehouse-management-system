@@ -5,23 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PemasokController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/PemasokIndex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/pemasok-index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pemasok/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pemasok/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pemasok/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pemasok/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BarangController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BarangController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/barang/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/barang/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/barang/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/barang/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/barang-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/barang-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PemasokController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PemasokController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/barang/show.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/pemasok-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/pemasok-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pemasok/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pemasok/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pemasok/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pemasok/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pemasok/show.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,17 +155,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/pemasok" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/pemasok" />
       <recent name="$PROJECT_DIR$/resources/views/user" />
       <recent name="$PROJECT_DIR$/app/Constants" />
       <recent name="$PROJECT_DIR$/resources/views/components" />
       <recent name="$PROJECT_DIR$/resources/lang/id" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -196,7 +187,7 @@
       <updated>1597826646046</updated>
       <workItem from="1597826647147" duration="5033000" />
       <workItem from="1597853465896" duration="72000" />
-      <workItem from="1597877425675" duration="18872000" />
+      <workItem from="1597877425675" duration="20347000" />
     </task>
     <servers />
   </component>
@@ -235,6 +226,10 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="633" y="414" width="644" height="220" key="ComposerInitDialogKey/0.0.1920.1053@0.0.1920.1053" timestamp="1597882563088" />
+    <state x="637" y="169" width="636" height="710" key="FileChooserDialogImpl" timestamp="1597912169074">
+      <screen x="0" y="0" width="1920" height="1053" />
+    </state>
+    <state x="637" y="169" width="636" height="710" key="FileChooserDialogImpl/0.0.1920.1053@0.0.1920.1053" timestamp="1597912169074" />
     <state width="1920" height="274" key="GridCell.Tab.0.bottom" timestamp="1597826658334">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
@@ -267,13 +262,13 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="590" y="0" width="729" height="1051" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1053@0.0.1920.1053" timestamp="1597888636415" />
-    <state x="455" y="232" width="1009" height="1469" key="run.anything.popup" timestamp="1597906476200">
+    <state x="455" y="232" width="1009" height="1469" key="run.anything.popup" timestamp="1597911897330">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="455" y="232" width="1009" height="1469" key="run.anything.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1597906476200" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1597906609732">
+    <state x="455" y="232" width="1009" height="1469" key="run.anything.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1597911897330" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1597912280824">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1597906609732" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1597912280824" />
   </component>
 </project>
