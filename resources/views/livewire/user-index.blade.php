@@ -55,18 +55,18 @@
                             Ubah
                         </a>
 
-                            <button
-                                    x-data="{}"
-                                    x-on:click="
-                                    window.confirmDialog()
-                                        .then(response => {
-                                            if (response.value) {
-                                                window.livewire.emit('user:delete', {{ $user->id }})
-                                            }
-                                        })"
-                                    class="btn btn-outline-danger btn-sm">
-                                Hapus
-                            </button>
+                        <button
+                                x-data="{}"
+                                x-on:click="
+                                window.confirmDialog()
+                                    .then(response => {
+                                        if (response.value) {
+                                            window.livewire.emit('user:delete', {{ $user->id }})
+                                        }
+                                    })"
+                                class="btn btn-outline-danger btn-sm">
+                            Hapus
+                        </button>
                     </td>
                 </tr>
             @endforeach

@@ -10,4 +10,11 @@
             Pengguna
         </a>
     @endcan
+
+    @can(\App\Providers\AuthServiceProvider::MANAGE_ANY_BARANG)
+        <a class="text-decoration-none d-block {{ Route::is("barang.*") ? "text-primary" : "text-dark"  }}"
+           href="{{ route("barang.index") }}">
+            Barang
+        </a>
+    @endcan
 </div>

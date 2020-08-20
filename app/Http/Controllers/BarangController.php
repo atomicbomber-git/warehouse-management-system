@@ -3,18 +3,30 @@
 namespace App\Http\Controllers;
 
 use App\Barang;
+use App\Providers\AuthServiceProvider;
 use Illuminate\Http\Request;
+use Illuminate\Routing\ResponseFactory;
 
 class BarangController extends Controller
 {
+    private ResponseFactory $responseFactory;
+
+    public function __construct(ResponseFactory $responseFactory)
+    {
+
+        $this->responseFactory = $responseFactory;
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
     public function index()
     {
-        //
+        $this->authorize(AuthServiceProvider::MANAGE_ANY_BARANG);
+        return $this->responseFactory->view("barang.index");
     }
 
     /**

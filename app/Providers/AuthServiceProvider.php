@@ -22,6 +22,8 @@ class AuthServiceProvider extends ServiceProvider
     const MANAGE_ANY_USER = "manage-any-user";
     const DELETE_USER = "delete-user";
 
+    const MANAGE_ANY_BARANG = "manage-any-barang";
+
     /**
      * Register any authentication / authorization services.
      *
@@ -43,6 +45,10 @@ class AuthServiceProvider extends ServiceProvider
                 Response::allow() :
                 Response::deny("Anda tidak dapat menghapus akun Anda sendiri.")
                 ;
+        });
+
+        Gate::define(self::MANAGE_ANY_BARANG, function (User $user) {
+            return $user->level === UserLevel::MANAGER;
         });
     }
 }
