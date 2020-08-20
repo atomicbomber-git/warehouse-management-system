@@ -4,6 +4,8 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+import Swal from "sweetalert2";
+
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -32,3 +34,17 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+
+window.confirmDialog = (attributes) => {
+    return Swal.fire({
+        title: `Konfirmasi`,
+        titleText: `Konfirmasi Tindakan`,
+        text: `Apakah Anda yakin ingin melakukan tindakan ini?`,
+        icon: `warning`,
+        showCancelButton: true,
+        confirmButtonText: `Ya`,
+        cancelButtonText: `Tidak`,
+        ...attributes,
+    })
+}
+

@@ -26,7 +26,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource("user", class_basename(UserController::class));
+Route::resource("user", class_basename(UserController::class))
+    ->except(["show", "destroy"]);
 
 
 Route::get('/home', 'HomeController@index')->name('home');

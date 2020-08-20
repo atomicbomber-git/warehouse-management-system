@@ -14,7 +14,7 @@ class ManagerSeeder extends Seeder
      */
     public function run()
     {
-        $usernameOrPassword = "manager";
+        $usernameOrPassword = "admin";
 
         User::query()->create([
             "name" => "Manager",

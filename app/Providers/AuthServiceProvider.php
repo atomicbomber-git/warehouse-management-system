@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Constants\UserLevel;
 use App\User;
+use Illuminate\Auth\Access\Response;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 
@@ -35,9 +36,13 @@ class AuthServiceProvider extends ServiceProvider
         });
 
         Gate::define(self::DELETE_USER, function (User $user, User $targetUser) {
-            return
+            return (
                 $user->level === UserLevel::MANAGER
-                && $user->id !== $targetUser->id;
+                && $user->id !== $targetUser->id
+            ) ?
+                Response::allow() :
+                Response::deny("Anda tidak dapat menghapus akun Anda sendiri.")
+                ;
         });
     }
 }

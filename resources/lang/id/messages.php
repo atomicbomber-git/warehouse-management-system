@@ -3,6 +3,7 @@
 return [
     'errors' => [
         'general' => 'Maaf, fitur tersebut tidak dapat diakses.',
+        'no_data' => 'Maaf, tidak terdapat data sama sekali.',
         '404' => 'Maaf, halaman yang Anda cari tidak tersedia.',
         '403' => 'Maaf, Anda tidak memiliki hak akses untuk halaman tersebut.'
     ],
