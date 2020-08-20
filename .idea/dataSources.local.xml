@@ -9,7 +9,11 @@
       <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>atomicbomber</user-name>
-      <schema-mapping />
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="warehouse_management_system" />
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>

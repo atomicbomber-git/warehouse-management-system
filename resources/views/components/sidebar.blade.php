@@ -17,4 +17,11 @@
             Barang
         </a>
     @endcan
+
+    @can(\App\Providers\AuthServiceProvider::MANAGE_ANY_PEMASOK)
+        <a class="text-decoration-none d-block {{ Route::is("pemasok.*") ? "text-primary" : "text-dark"  }}"
+           href="{{ route("pemasok.index") }}">
+            Pemasok
+        </a>
+    @endcan
 </div>

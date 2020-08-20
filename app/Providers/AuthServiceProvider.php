@@ -23,6 +23,7 @@ class AuthServiceProvider extends ServiceProvider
     const DELETE_USER = "delete-user";
 
     const MANAGE_ANY_BARANG = "manage-any-barang";
+    const MANAGE_ANY_PEMASOK = "manage-any-barang";
 
     /**
      * Register any authentication / authorization services.
@@ -48,6 +49,10 @@ class AuthServiceProvider extends ServiceProvider
         });
 
         Gate::define(self::MANAGE_ANY_BARANG, function (User $user) {
+            return $user->level === UserLevel::MANAGER;
+        });
+
+        Gate::define(self::MANAGE_ANY_PEMASOK, function (User $user) {
             return $user->level === UserLevel::MANAGER;
         });
     }

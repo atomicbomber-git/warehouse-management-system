@@ -1,38 +1,31 @@
 <div>
     <h1 class="feature-title">
-        Barang
+        Pemasok
     </h1>
 
     <x-messages></x-messages>
 
-    <div class="d-flex justify-content-between py-3">
-        <div></div>
-        <a href="{{ route("barang.create") }}" class="btn btn-primary">
-            Tambah
-        </a>
-    </div>
-
     <div>
-        @if($barangs->isNotEmpty())
+        @if($pemasoks->isNotEmpty())
             <div class="table-responsive">
                 <table class="table table-sm table-striped table-hover">
                     <thead class="thead-light">
                     <tr>
-                        <th> # </th>
+                        <th> #</th>
                         <th> Nama </th>
-                        <th> Satuan </th>
-                        <th class="text-right"> Harga Jual </th>
+                        <th> Alamat </th>
+                        <th> No. Telepon </th>
                         <th class="text-center"> @lang("app.actions") </th>
                     </tr>
                     </thead>
 
                     <tbody>
-                    @foreach ($barangs as $barang)
+                    @foreach ($pemasoks as $pemasok)
                         <tr>
-                            <td> {{ $barangs->firstItem() + $loop->index }} </td>
-                            <td> {{ $barang->nama }} </td>
-                            <td> {{ $barang->satuan }} </td>
-                            <td class="text-right"> {{ Facades\App\Support\Formatter::currency($barang->harga_jual) }} </td>
+                            <td> {{ $pemasoks->firstItem() + $loop->index }} </td>
+                            <td> {{ $pemasok->nama }} </td>
+                            <td> {{ $pemasok->alamat }} </td>
+                            <td> {{ $pemasok->no_telepon }} </td>
                             <td class="text-center">
                                 <button
                                         x-data="{}"
@@ -40,7 +33,7 @@
                                         window.confirmDialog()
                                             .then(response => {
                                                 if (response.value) {
-                                                    window.livewire.emit('barang:delete', {{ $barang->id }})
+                                                    window.livewire.emit('pemasok:delete', {{ $pemasok->id }})
                                                 }
                                             })"
                                         class="btn btn-outline-danger btn-sm"
@@ -55,7 +48,7 @@
             </div>
 
             <div class="d-flex justify-content-center">
-                {{ $barangs->links() }}
+                {{ $pemasoks->links() }}
             </div>
 
         @else

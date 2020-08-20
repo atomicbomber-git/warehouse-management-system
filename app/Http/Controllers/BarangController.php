@@ -3,9 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Barang;
+use App\Constants\MessageState;
 use App\Providers\AuthServiceProvider;
+use App\Support\SessionHelper;
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Routing\ResponseFactory;
+use Illuminate\Validation\Rule;
 
 class BarangController extends Controller
 {
@@ -20,8 +26,8 @@ class BarangController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
-     * @throws \Illuminate\Auth\Access\AuthorizationException
+     * @return Response
+     * @throws AuthorizationException
      */
     public function index()
     {
@@ -32,52 +38,70 @@ class BarangController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
-        //
+        $this->authorize(AuthServiceProvider::MANAGE_ANY_BARANG);
+        return $this->responseFactory->view("barang.create");
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return RedirectResponse
+     * @throws AuthorizationException
      */
     public function store(Request $request)
     {
-        //
+        $this->authorize(AuthServiceProvider::MANAGE_ANY_BARANG);
+
+        $data = $request->validate([
+            "nama" => ["required", "string", Rule::unique(Barang::class)],
+            "satuan" => ["required", "string"],
+            "harga_jual" => ["required", "numeric", "gte:0"],
+        ]);
+
+        Barang::query()->create($data);
+
+        SessionHelper::flashMessage(
+            __("messages.create.success"),
+            MessageState::STATE_SUCCESS,
+        );
+
+        return $this->responseFactory->redirectToRoute("barang.index");
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Barang  $barang
-     * @return \Illuminate\Http\Response
+     * @param Barang $barang
+     * @return Response
      */
     public function show(Barang $barang)
     {
-        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Barang  $barang
-     * @return \Illuminate\Http\Response
+     * @param Barang $barang
+     * @return Response
      */
     public function edit(Barang $barang)
     {
-        //
+        return $this->responseFactory->view("barang.edit", [
+            "barang" => $barang,
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Barang  $barang
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param Barang $barang
+     * @return Response
      */
     public function update(Request $request, Barang $barang)
     {
@@ -87,8 +111,8 @@ class BarangController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Barang  $barang
-     * @return \Illuminate\Http\Response
+     * @param Barang $barang
+     * @return Response
      */
     public function destroy(Barang $barang)
     {

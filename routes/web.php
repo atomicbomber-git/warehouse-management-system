@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\PemasokController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +32,9 @@ Route::resource("user", class_basename(UserController::class))
     ->except(["show", "destroy"]);
 
 Route::resource("barang", class_basename(BarangController::class))
+    ->except(["show", "destroy"]);
+
+Route::resource("pemasok", class_basename(PemasokController::class))
     ->except(["show", "destroy"]);
 
 

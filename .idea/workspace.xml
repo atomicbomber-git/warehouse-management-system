@@ -5,19 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/BarangIndex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Support/Formatter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/barang/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/barang/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/barang/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/barang/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/barang-index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PemasokController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/PemasokIndex.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/pemasok-index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pemasok/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pemasok/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pemasok/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pemasok/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BarangController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BarangController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/barang/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/barang/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/barang/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/barang/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/user-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/user-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/barang-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/barang-index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,12 +160,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
+    <property name="DatabaseDriversLRU" value="mariadb&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/user" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -179,7 +183,10 @@
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="" />
@@ -189,7 +196,7 @@
       <updated>1597826646046</updated>
       <workItem from="1597826647147" duration="5033000" />
       <workItem from="1597853465896" duration="72000" />
-      <workItem from="1597877425675" duration="7774000" />
+      <workItem from="1597877425675" duration="18872000" />
     </task>
     <servers />
   </component>
@@ -200,14 +207,22 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="0" width="1910" height="1051" key="#Live_Templates" timestamp="1597888865723">
+    <state x="0" y="0" width="1910" height="1051" key="#Live_Templates" timestamp="1597892165568">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="0" y="0" width="1910" height="1051" key="#Live_Templates/0.0.1920.1053@0.0.1920.1053" timestamp="1597888865723" />
-    <state x="538" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597880612281">
+    <state x="0" y="0" width="1910" height="1051" key="#Live_Templates/0.0.1920.1053@0.0.1920.1053" timestamp="1597892165568" />
+    <state x="355" y="0" width="1200" height="1051" key="#Plugins" timestamp="1597894014346">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="538" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1597880612281" />
+    <state x="355" y="0" width="1200" height="1051" key="#Plugins/0.0.1920.1053@0.0.1920.1053" timestamp="1597894014346" />
+    <state x="251" y="272" width="1596" height="490" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1597906031820">
+      <screen x="0" y="0" width="1920" height="1053" />
+    </state>
+    <state x="251" y="272" width="1596" height="490" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1597906031820" />
+    <state x="538" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597905714523">
+      <screen x="0" y="0" width="1920" height="1053" />
+    </state>
+    <state x="538" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1597905714523" />
     <state x="644" y="135" width="621" height="778" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597834763160">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
@@ -240,21 +255,25 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="568" y="156" width="773" height="737" key="NewPhpClassDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1597888645236" />
-    <state x="221" y="0" key="SettingsEditor" timestamp="1597888766587">
+    <state x="221" y="0" key="SettingsEditor" timestamp="1597906164614">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="221" y="0" key="SettingsEditor/0.0.1920.1053@0.0.1920.1053" timestamp="1597888766587" />
-    <state x="553" y="134" width="810" height="786" key="StructurePopup" timestamp="1597882565334">
+    <state x="221" y="0" key="SettingsEditor/0.0.1920.1053@0.0.1920.1053" timestamp="1597906164614" />
+    <state x="553" y="134" width="930" height="786" key="StructurePopup" timestamp="1597906757568">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="553" y="134" width="810" height="786" key="StructurePopup/0.0.1920.1053@0.0.1920.1053" timestamp="1597882565334" />
+    <state x="553" y="134" width="930" height="786" key="StructurePopup/0.0.1920.1053@0.0.1920.1053" timestamp="1597906757568" />
     <state x="590" y="0" width="729" height="1051" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597888636415">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="590" y="0" width="729" height="1051" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1053@0.0.1920.1053" timestamp="1597888636415" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1597888805408">
+    <state x="455" y="232" width="1009" height="1469" key="run.anything.popup" timestamp="1597906476200">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1597888805408" />
+    <state x="455" y="232" width="1009" height="1469" key="run.anything.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1597906476200" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1597906609732">
+      <screen x="0" y="0" width="1920" height="1053" />
+    </state>
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1597906609732" />
   </component>
 </project>
