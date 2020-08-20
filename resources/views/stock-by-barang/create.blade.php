@@ -15,6 +15,8 @@
         / Tambah
     </h1>
 
+    <x-messages></x-messages>
+
     <div class="card">
         <div class="card-body">
             <form action="{{ route("stock-grouped-by-barang.stock-by-barang.store", $barang) }}"
@@ -56,42 +58,44 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="barang_id"> Barang: </label>
-                    <select
-                            id="barang_id"
-                            type="text"
-                            class="form-control @error("barang_id") is-invalid @enderror"
-                            name="barang_id"
-                    >
-                        @if($old_barang ?? null)
-                            <option selected="selected" value="{{ $old_barang->id }}">
-                                {{ $old_barang->nama  }}
-                            </option>
-                        @endif
-                    </select>
-                    @error("barang_id")
+                    <label for="tanggal_masuk"> Tanggal Masuk: </label>
+                    <input
+                            id="tanggal_masuk"
+                            type="date"
+                            placeholder="Tanggal Masuk"
+                            class="form-control @error("tanggal_masuk") is-invalid @enderror"
+                            name="tanggal_masuk"
+                            value="{{ old("tanggal_masuk") }}"
+                    />
+                    @error("tanggal_masuk")
                     <span class="invalid-feedback">
-                    {{ $message }}
-                </span>
+                        {{ $message }}
+                    </span>
                     @enderror
+                </div>
 
-                    @push("scripts")
-                        <script type="application/javascript">
-                            $("#barang_id").select2({
-                                ajax: {
-                                    url: "{{ route("barang-search.index") }}",
-                                },
-                                theme: "bootstrap4"
-                            })
-                        </script>
-                    @endpush
+                <div class="form-group">
+                    <label for="tanggal_kadaluarsa"> Tanggal Kadaluarsa: </label>
+                    <input
+                            id="tanggal_kadaluarsa"
+                            type="date"
+                            placeholder="Tanggal Kadaluarsa"
+                            class="form-control @error("tanggal_kadaluarsa") is-invalid @enderror"
+                            name="tanggal_kadaluarsa"
+                            value="{{ old("tanggal_kadaluarsa") }}"
+                    />
+                    @error("tanggal_kadaluarsa")
+                    <span class="invalid-feedback">
+                        {{ $message }}
+                    </span>
+                    @enderror
                 </div>
 
                 <div class="form-group">
                     <label for="jumlah"> Jumlah: </label>
                     <input
                             id="jumlah"
-                            type="text"
+                            type="number"
                             placeholder="Jumlah"
                             class="form-control @error("jumlah") is-invalid @enderror"
                             name="jumlah"
@@ -104,11 +108,29 @@
                     @enderror
                 </div>
 
+                <div class="form-group">
+                    <label for="harga_satuan"> Harga Satuan: </label>
+                    <input
+                            id="harga_satuan"
+                            type="number"
+                            placeholder="Harga Satuan"
+                            class="form-control @error("harga_satuan") is-invalid @enderror"
+                            name="harga_satuan"
+                            value="{{ old("harga_satuan") }}"
+                    />
+                    @error("harga_satuan")
+                    <span class="invalid-feedback">
+                        {{ $message }}
+                    </span>
+                    @enderror
+                </div>
 
-
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-primary">
+                        Tambah
+                    </button>
+                </div>
             </form>
-
-
         </div>
     </div>
 @endsection

@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Barang;
+use App\Constants\MessageState;
 use App\Pemasok;
+use App\Stock;
+use App\Support\SessionHelper;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class StockByBarangController extends Controller
 {
@@ -47,13 +51,27 @@ class StockByBarangController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request)
+    public function store(Request $request, Barang $barang)
     {
         $data = $request->validate([
-            "nunu" => ["required"],
+            "pemasok_id" => ["required", Rule::exists(Pemasok::class, "id")],
+            "tanggal_masuk" => ["required", "date"],
+            "tanggal_kadaluarsa" => ["required", "date"],
+            "jumlah" => ["required", "numeric", "gte:1"],
+            "harga_satuan" => ["required", "numeric", "gte:0"],
         ]);
+
+        $barang->stocks()->create($data);
+
+        SessionHelper::flashMessage(
+            __("messages.create.success"),
+            MessageState::STATE_SUCCESS,
+        );
+
+        return $this->responseFactory
+            ->redirectToRoute("stock-grouped-by-barang.stock-by-barang.index", $barang);
     }
 
     /**
@@ -86,17 +104,6 @@ class StockByBarangController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Barang $barang)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Barang  $barang
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Barang $barang)
     {
         //
     }

@@ -5,36 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/BarangSearchController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PemasokSearchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/warehouse-management-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/warehouse-management-system.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PenjualanController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ItemPenjualan.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Penjualan.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_20_234248_create_penjualan_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_20_234517_create_item_penjualan_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BarangController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BarangController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StockByBarangController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StockByBarangController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PemasokIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PemasokIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/StockByBarangIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/StockByBarangIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/StockGroupedByBarangIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/StockGroupedByBarangIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Stock.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Stock.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/BarangFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/BarangFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/BarangSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/BarangSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/barang/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/barang/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/barang-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/barang-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stock-by-barang-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stock-by-barang-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stock-grouped-by-barang-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stock-grouped-by-barang-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/stock-by-barang/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stock-by-barang/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/stock-by-barang/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stock-by-barang/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +189,7 @@
       <updated>1597826646046</updated>
       <workItem from="1597826647147" duration="5033000" />
       <workItem from="1597853465896" duration="72000" />
-      <workItem from="1597877425675" duration="36812000" />
+      <workItem from="1597877425675" duration="40277000" />
     </task>
     <servers />
   </component>
@@ -237,10 +216,10 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="538" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1597905714523" />
-    <state x="644" y="135" width="621" height="778" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597918734968">
+    <state x="644" y="135" width="621" height="778" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597941930764">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="644" y="135" width="621" height="778" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1597918734968" />
+    <state x="644" y="135" width="621" height="778" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1597941930764" />
     <state x="562" y="169" width="786" height="710" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597934548239">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
@@ -269,10 +248,10 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="1920" height="274" key="GridCell.Tab.0.right/0.0.1920.1053@0.0.1920.1053" timestamp="1597826658334" />
-    <state x="568" y="156" width="773" height="737" key="NewPhpClassDialog" timestamp="1597915875688">
+    <state x="568" y="156" width="926" height="737" key="NewPhpClassDialog" timestamp="1597942227617">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="568" y="156" width="773" height="737" key="NewPhpClassDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1597915875688" />
+    <state x="568" y="156" width="926" height="737" key="NewPhpClassDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1597942227617" />
     <state x="221" y="0" key="SettingsEditor" timestamp="1597929078414">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
@@ -293,9 +272,9 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="455" y="232" width="1009" height="1469" key="run.anything.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1597932468329" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1597935317799">
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1597942216355">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1597935317799" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1597942216355" />
   </component>
 </project>
