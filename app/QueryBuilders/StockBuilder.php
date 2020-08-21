@@ -15,9 +15,9 @@ class StockBuilder extends Builder
             ->selectRaw("harga_satuan * jumlah AS $fieldName");
     }
 
-    public function withHasAlert($fieldName = "has_alert", $threshold = 5)
+    public function withHasAlert($fieldName = "has_alert", $threshold = null)
     {
         return $this
-            ->selectRaw("? >= DATE_SUB(tanggal_kadaluarsa, INTERVAL 1 WEEK) AS $fieldName", [$threshold]);
+            ->selectRaw("DATE(?) >= DATE_SUB(tanggal_kadaluarsa, INTERVAL 1 WEEK) AS $fieldName", [$threshold ?? now()]);
     }
 }

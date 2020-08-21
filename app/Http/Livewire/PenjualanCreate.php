@@ -54,6 +54,13 @@ class PenjualanCreate extends Component
         $this->adjustStock($data["items"]);
 
         DB::commit();
+
+        SessionHelper::flashMessage(
+            __("messages.create.success"),
+            MessageState::STATE_SUCCESS,
+        );
+
+        $this->redirectRoute("penjualan.index");
     }
 
     public function getValidatedData(): array

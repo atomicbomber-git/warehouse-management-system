@@ -42,7 +42,7 @@
                             <td> {{ $stock->tanggal_masuk }} </td>
                             <td>
                                 {{ $stock->tanggal_kadaluarsa }}
-                                @if($barang->has_alert)
+                                @if($stock->has_alert)
                                     <span class="badge badge-pill badge-danger">
                                         Stock Hampir Kadaluarsa
                                     </span>

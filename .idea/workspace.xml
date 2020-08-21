@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/QueryBuilders/StockBuilder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Barang.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Barang.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/StockByBarangIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/StockByBarangIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/StockGroupedByBarangIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/StockGroupedByBarangIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/QueryBuilder/BarangBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/QueryBuilders/BarangBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Stock.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Stock.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PegawaiSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PegawaiSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/StockSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/StockSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/QueryBuilders/StockBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/QueryBuilders/StockBuilder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/stock-by-barang-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stock-by-barang-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stock-grouped-by-barang-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stock-grouped-by-barang-index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +185,7 @@
       <workItem from="1597826647147" duration="5033000" />
       <workItem from="1597853465896" duration="72000" />
       <workItem from="1597877425675" duration="40683000" />
-      <workItem from="1597972252678" duration="22116000" />
+      <workItem from="1597972252678" duration="22847000" />
     </task>
     <servers />
   </component>
@@ -287,9 +280,9 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="455" y="232" width="1009" height="1469" key="run.anything.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1597932468329" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1597998768783">
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1597999220128">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1597998768783" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1597999220128" />
   </component>
 </project>
