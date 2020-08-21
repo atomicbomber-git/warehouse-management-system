@@ -146,5 +146,9 @@ return [
     'attributes' => [
         'username' => 'nama pengguna',
         'password' => 'kata sandi',
+        'pemasok_id' => 'pemasok',
+        'barang_id' => 'barang',
+        'user_id' => 'pengguna',
+        'items.*.harga_jual' => 'harga jual barang',
     ],
 ];

@@ -8,7 +8,7 @@ use Faker\Generator as Faker;
 $factory->define(Barang::class, function (Faker $faker) {
     return [
         'nama' => $faker->unique()->ingredient,
-        'satuan' => $faker->randomElement(['bungkus', 'kotak', 'kg', 'kardus']),
+        'satuan' => $faker->randomElement(['Bungkus', 'Kotak', 'Kg', 'Kardus']),
         'harga_jual' => rand(1, 200) * 5000
     ];
 });

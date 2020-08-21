@@ -3,10 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Penjualan;
+use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Request;
 
 class PenjualanController extends Controller
 {
+    private ResponseFactory $responseFactory;
+
+    public function __construct(ResponseFactory $responseFactory)
+    {
+
+        $this->responseFactory = $responseFactory;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +23,7 @@ class PenjualanController extends Controller
      */
     public function index()
     {
-        //
+        return $this->responseFactory->view("penjualan.index");
     }
 
     /**
@@ -24,7 +33,7 @@ class PenjualanController extends Controller
      */
     public function create()
     {
-        //
+        return $this->responseFactory->view("penjualan.create");
     }
 
     /**

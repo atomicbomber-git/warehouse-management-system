@@ -4,6 +4,7 @@ use App\Http\Controllers\BarangController;
 use App\Http\Controllers\BarangSearchController;
 use App\Http\Controllers\PemasokController;
 use App\Http\Controllers\PemasokSearchController;
+use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\StockByBarangController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\StockGroupedByBarangController;
@@ -30,7 +31,7 @@ Auth::routes([
 ]);
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route("login");
 });
 
 Route::resource("pemasok-search", class_basename(PemasokSearchController::class))
@@ -46,6 +47,9 @@ Route::resource("barang", class_basename(BarangController::class))
     ->except(["show", "destroy"]);
 
 Route::resource("pemasok", class_basename(PemasokController::class))
+    ->except(["show", "destroy"]);
+
+Route::resource("penjualan", class_basename(PenjualanController::class))
     ->except(["show", "destroy"]);
 
 Route::resource("stock-grouped-by-barang", class_basename(StockGroupedByBarangController::class))

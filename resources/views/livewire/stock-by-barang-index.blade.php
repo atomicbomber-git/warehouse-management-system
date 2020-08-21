@@ -73,7 +73,7 @@
         @else
             <div class="alert alert-warning">
                 <i class="fas fa-exclamation-triangle"></i>
-                {{ __("messages.no_data") }}
+                {{ __("messages.errors.no_data") }}
             </div>
         @endif
     </div>

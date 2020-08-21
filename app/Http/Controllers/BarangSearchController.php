@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Barang;
 use App\Pemasok;
 use Illuminate\Contracts\Routing\ResponseFactory;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -26,16 +27,19 @@ class BarangSearchController extends Controller
     public function index(Request $request)
     {
         $paginator = Barang::query()
+            ->when($request->query("term"), function (Builder $builder, $term) {
+                $builder->where("nama", "like", "$term%");
+            })
             ->orderBy("nama")
             ->paginate();
 
         return $this->responseFactory->json([
             "results" =>
                 collect($paginator->items())
-                    ->map(function (Barang $pemasok) {
+                    ->map(function (Barang $barang) {
                         return [
-                            "id" => $pemasok->id,
-                            "text" => $pemasok->nama . " $pemasok->id",
+                            "id" => $barang->id,
+                            "text" => $barang->nama,
                         ];
                     }),
             "pagination" => [
