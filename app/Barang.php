@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App\QueryBuilder\BarangBuilder;
+use App\QueryBuilders\BarangBuilder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 

@@ -64,7 +64,7 @@ class UserController extends Controller
             "password" => ["required", "string", "confirmed"],
         ]);
 
-        $data["password"] = Hash::make("password");
+        $data["password"] = Hash::make($data["password"]);
 
         User::query()->create(
             $data
@@ -113,7 +113,7 @@ class UserController extends Controller
         ]);
 
         if (isset($data["password"])) {
-            $data["password"] = Hash::make("password");
+            $data["password"] = Hash::make($data["password"]);
         }
         else {
             unset($data["password"]);

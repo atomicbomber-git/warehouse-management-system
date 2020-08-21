@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\QueryBuilders\BarangBuilder;
+use App\QueryBuilders\StockBuilder;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -10,6 +12,17 @@ class Stock extends Model
 {
     protected $table = "stock";
     protected $guarded = [];
+
+    public static function query(): StockBuilder
+    {
+        return parent::query();
+    }
+
+    /** return StockBuilder */
+    public function newEloquentBuilder($query)
+    {
+        return new StockBuilder($query);
+    }
 
     public function scopeWithSubtotal(Builder $builder, $fieldName = "subtotal")
     {

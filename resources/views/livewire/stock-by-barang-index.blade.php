@@ -40,8 +40,15 @@
                         <tr>
                             <td> {{ $stocks->firstItem() + $loop->index }} </td>
                             <td> {{ $stock->tanggal_masuk }} </td>
-                            <td> {{ $stock->tanggal_kadaluarsa }} </td>
-                            <td> {{ $stock->pemasok->nama }} </td>
+                            <td>
+                                {{ $stock->tanggal_kadaluarsa }}
+                                @if($barang->has_alert)
+                                    <span class="badge badge-pill badge-danger">
+                                        Stock Hampir Kadaluarsa
+                                    </span>
+                                @endif
+                            </td>
+                            <td> {{ $stock->pemasok->nama }}</td>
                             <td class="text-right"> {{ \Facades\App\Support\Formatter::number($stock->jumlah) }} </td>
                             <td class="text-right"> {{ \Facades\App\Support\Formatter::currency($stock->harga_satuan) }} </td>
                             <td class="text-right"> {{ \Facades\App\Support\Formatter::currency($stock->subtotal) }} </td>

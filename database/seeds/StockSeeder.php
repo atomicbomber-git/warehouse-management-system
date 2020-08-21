@@ -27,8 +27,8 @@ class StockSeeder extends Seeder
                     continue;
                 }
 
-                $tanggalMasuk = now()->subDays(rand(0, 200));
-                $tanggalKadaluarsa = $tanggalMasuk->clone()->addDays(rand(365 * 2, 365 * 4));
+                $tanggalMasuk = now();
+                $tanggalKadaluarsa = $tanggalMasuk->clone()->addDays(rand(0, 14));
 
                 Stock::query()->create([
                     "barang_id" => $barang->id,

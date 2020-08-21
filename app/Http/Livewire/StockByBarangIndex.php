@@ -55,9 +55,11 @@ class StockByBarangIndex extends Component
     public function getStocksProperty(): LengthAwarePaginator
     {
         return $this->getBarangProperty()->stocks()
+            ->select("*")
             ->withSubtotal()
-            ->orderByDesc("tanggal_masuk")
+            ->withHasAlert()
             ->with("pemasok")
+            ->orderByDesc("tanggal_masuk")
             ->paginate();
     }
 

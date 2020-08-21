@@ -15,6 +15,7 @@ class StockGroupedByBarangIndex extends Component
         return view('livewire.stock-grouped-by-barang-index', [
             "barangs" => Barang::query()
                 ->withStock()
+                ->withHasAlert()
                 ->paginate()
         ]);
     }

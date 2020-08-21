@@ -23,7 +23,14 @@
                     @foreach ($barangs as $barang)
                         <tr>
                             <td> {{ $barangs->firstItem() + $loop->index }} </td>
-                            <td> {{ $barang->nama }} </td>
+                            <td>
+                                {{ $barang->nama }}
+                                @if($barang->has_alert)
+                                    <span class="badge badge-pill badge-danger">
+                                        Stock Hampir Habis
+                                    </span>
+                                @endif
+                            </td>
                             <td> {{ $barang->satuan }} </td>
                             <td class="text-right"> {{ \Facades\App\Support\Formatter::number($barang->stock) }} </td>
                             <td class="text-center">
