@@ -5,6 +5,7 @@ namespace App\Repositories;
 
 
 use App\Barang;
+use App\Constants\AlasanTransaksiStock;
 use App\Stock;
 use App\TransaksiStock;
 use Illuminate\Support\Arr;
@@ -22,7 +23,10 @@ class Inventory
         $transaksiStock = $this->adjust(
             $stock,
             $data["jumlah"],
-            $data["tanggal_masuk"]
+            [
+                "waktu" => $data["tanggal_masuk"],
+                "alasan" => AlasanTransaksiStock::PEMBELIAN,
+            ]
         );
 
         $transaksiStock->transaksi_keuangan()->create([
@@ -36,7 +40,7 @@ class Inventory
         DB::commit();
     }
 
-    public function returnStock(Stock $stock)
+    public function returnStock(Stock $stock, $options = [])
     {
         $originalStock = Stock::query()
             ->whereKey( $stock->id)
@@ -44,7 +48,9 @@ class Inventory
             ->withSubtotal()
             ->first();
 
-        $transaksiStock = $this->adjust($stock, -$originalStock->jumlah);
+        $transaksiStock = $this->adjust($stock, -$originalStock->jumlah, [
+            "alasan" => AlasanTransaksiStock::PENGEMBALIAN,
+        ]);
 
         $transaksiStock->transaksi_keuangan()->create([
             "tanggal_transaksi" => today(),
@@ -52,19 +58,20 @@ class Inventory
         ]);
     }
 
-    public function adjust(Stock $stock, $jumlah, $waktu = null, $entitasTerkait = null)
+    public function adjust(Stock $stock, $jumlah, $options = [])
     {
         DB::beginTransaction();
 
         /** @var TransaksiStock $transaksiStock */
         $transaksiStock = $stock->transaksis()->create([
-            "tanggal_transaksi" => $waktu ?? now(),
+            "tanggal_transaksi" => $options["waktu"] ?? now(),
             "jumlah" => $jumlah,
+            "alasan" => $options["alasan"] ?? ($jumlah > 0 ? AlasanTransaksiStock::PEMBELIAN : AlasanTransaksiStock::PENJUALAN)
         ]);
 
-        if ($entitasTerkait !== null) {
+        if (($options["entitas_terkait"] ?? null) !== null) {
             $transaksiStock->entitas_terkait()
-                ->associate($entitasTerkait)
+                ->associate($options["entitas_terkait"])
                 ->save();
         }
 
@@ -73,7 +80,7 @@ class Inventory
         return $transaksiStock;
     }
 
-    public function removeStockByBarang(Barang $barang, $jumlah, $entitasTerkait = null)
+    public function removeStockByBarang(Barang $barang, $jumlah, $options)
     {
         $runningTotal = 0;
 
@@ -103,10 +110,10 @@ class Inventory
             ->filter(function ($stockData) {
                 return $stockData["to_be_used"] > 0;
             })
-            ->each(function ($stockData) use ($entitasTerkait) {
+            ->each(function ($stockData) use ($options) {
                 /** @var Stock $stock */
                 $stock = $stockData["stock"];
-                $this->adjust($stock, -$stockData["to_be_used"], null, $entitasTerkait);
+                $this->adjust($stock, -$stockData["to_be_used"], $options);
             });
 
         DB::commit();

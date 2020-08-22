@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Barang;
+use App\Constants\AlasanTransaksiStock;
 use App\Constants\MessageState;
 use App\Exceptions\QuantityExceedsCurrentStockException;
 use App\ItemPenjualan;
@@ -71,7 +72,10 @@ class PenjualanCreate extends Component
             $inventory->removeStockByBarang(
                 $barang,
                 $item["jumlah"],
-                $itemPenjualan,
+                [
+                    "entitas_terkait" => $itemPenjualan,
+                    "alasan" => AlasanTransaksiStock::PENJUALAN,
+                ],
             );
         }
 

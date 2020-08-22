@@ -17,6 +17,8 @@ class CreateTransaksiStockTable extends Migration
             $table->increments('id');
 
             $table->timestamp('tanggal_transaksi');
+            $table->string("alasan")->index()
+                ->comment("PEMBELIAN, PENJUALAN, PENGEMBALIAN, PEMBUANGAN");
             $table->unsignedInteger('stock_id')->index();
             $table->integer('jumlah');
 
