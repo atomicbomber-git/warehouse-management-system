@@ -3,6 +3,7 @@
 use App\Barang;
 use App\Constants\StockStatus;
 use App\Pemasok;
+use App\Repositories\Inventory;
 use App\Stock;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -16,6 +17,9 @@ class StockSeeder extends Seeder
      */
     public function run()
     {
+        /** @var Inventory $inventory */
+        $inventory = app(Inventory::class);
+
         DB::beginTransaction();
 
         $pemasoks = Pemasok::query()->get();
@@ -30,19 +34,12 @@ class StockSeeder extends Seeder
                 $tanggalMasuk = now();
                 $tanggalKadaluarsa = $tanggalMasuk->clone()->addDays(rand(0, 14));
 
-                /** @var Stock $stock */
-                $stock = Stock::query()->create([
-                    "barang_id" => $barang->id,
+                $inventory->purchaseBarang($barang, [
                     "pemasok_id" => $pemasok->id,
                     "jumlah" => rand(1, 10),
                     "harga_satuan" => rand(5, 20) * 500,
                     "tanggal_masuk" => $tanggalMasuk,
                     "tanggal_kadaluarsa" => $tanggalKadaluarsa,
-                ]);
-
-                $stock->transaksis()->create([
-                    "waktu_transaksi" => now(),
-                    "jumlah" => $stock->jumlah,
                 ]);
             }
         }

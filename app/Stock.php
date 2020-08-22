@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 
 class Stock extends Model
 {
@@ -29,6 +30,11 @@ class Stock extends Model
     {
         $builder->select("*")
             ->selectRaw("harga_satuan * jumlah AS {$fieldName}");
+    }
+
+    public function transaksi_keuangan(): MorphOne
+    {
+        return $this->morphOne(TransaksiKeuangan::class, "entitas_terkait");
     }
 
     public function barang(): BelongsTo

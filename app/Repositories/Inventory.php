@@ -11,18 +11,38 @@ use Illuminate\Support\Facades\DB;
 
 class Inventory
 {
-    public function store(Barang $barang, $data)
+    public function purchaseBarang(Barang $barang, $data)
     {
         DB::beginTransaction();
 
+        /** @var Stock $stock */
         $stock = $barang->stocks()->create($data);
 
-        $stock->transaksis()->create([
-            "waktu_transaksi" => $stock->tanggal_masuk,
-            "jumlah" => $stock->jumlah,
+        $transaksiStock = $this->adjust($stock, $stock->jumlah);
+
+        $transaksiStock->transaksi_keuangan()->create([
+            "tanggal_transaksi" => today(),
+            "jumlah" => -$transaksiStock->stock()
+                ->selectRaw("jumlah * harga_satuan as subtotal")
+                ->value("subtotal"),
         ]);
 
         DB::commit();
+    }
+
+    public function returnStock(Stock $stock)
+    {
+        $originalStockSubtotal = Stock::query()
+            ->where("id", $stock->id)
+            ->selectRaw("jumlah * harga_satuan AS subtotal")
+            ->value("subtotal");
+
+        $transaksiStock = $this->adjust($stock, $stock->jumlah);
+
+        $transaksiStock->transaksi_keuangan()->create([
+            "tanggal_transaksi" => today(),
+            "jumlah" => $originalStockSubtotal,
+        ]);
     }
 
     public function adjust(Stock $stock, $jumlah, $waktu = null, $entitasTerkait = null)
@@ -31,22 +51,24 @@ class Inventory
 
         $stock->increment("jumlah", $jumlah);
 
-        /** @var TransaksiStock $transaksi */
-        $transaksi = $stock->transaksis()->create([
-            "waktu_transaksi" => $waktu ?? now(),
+        /** @var TransaksiStock $transaksiStock */
+        $transaksiStock = $stock->transaksis()->create([
+            "tanggal_transaksi" => $waktu ?? now(),
             "jumlah" => $jumlah,
         ]);
 
         if ($entitasTerkait !== null) {
-            $transaksi->entitas_terkait()
+            $transaksiStock->entitas_terkait()
                 ->associate($entitasTerkait)
                 ->save();
         }
 
         DB::commit();
+
+        return $transaksiStock;
     }
 
-    public function removeByBarang(Barang $barang, $jumlah, $entitasTerkait = null)
+    public function removeStockByBarang(Barang $barang, $jumlah, $entitasTerkait = null)
     {
         $runningTotal = 0;
 

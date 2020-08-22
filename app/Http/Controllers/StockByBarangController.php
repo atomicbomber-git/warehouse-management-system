@@ -65,7 +65,7 @@ class StockByBarangController extends Controller
             "harga_satuan" => ["required", "numeric", "gte:0"],
         ]);
 
-        $inventory->store($barang, $data);
+        $inventory->purchaseBarang($barang, $data);
 
         SessionHelper::flashMessage(
             __("messages.create.success"),

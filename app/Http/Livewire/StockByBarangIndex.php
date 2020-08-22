@@ -31,12 +31,10 @@ class StockByBarangIndex extends Component
     {
         try {
             /** @var Stock $stock */
-            $stock = Stock::query()->findOrFail($stockId);
+            $stock = Stock::query()
+                ->findOrFail($stockId);
 
-            $inventory->adjust(
-                $stock,
-                -$stock->jumlah,
-            );
+            $inventory->returnStock($stock);
 
             SessionHelper::flashMessage(
                 __("messages.delete.success"),

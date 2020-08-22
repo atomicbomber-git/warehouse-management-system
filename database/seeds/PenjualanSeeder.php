@@ -46,7 +46,7 @@ class PenjualanSeeder extends Seeder
                             "harga_satuan" => $barang->harga_jual,
                         ]);
 
-                        $inventory->removeByBarang($barang, $jumlah, $itemPenjualan);
+                        $inventory->removeStockByBarang($barang, $jumlah, $itemPenjualan);
                     });
             });
 

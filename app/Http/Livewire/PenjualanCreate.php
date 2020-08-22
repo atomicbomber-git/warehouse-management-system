@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Barang;
 use App\Constants\MessageState;
 use App\Exceptions\QuantityExceedsCurrentStockException;
+use App\ItemPenjualan;
 use App\Penjualan;
 use App\Repositories\Inventory;
 use App\Stock;
@@ -47,16 +48,27 @@ class PenjualanCreate extends Component
         DB::beginTransaction();
 
         foreach ($data["items"] as $barangId => $item) {
+            /** @var ItemPenjualan $itemPenjualan */
             $itemPenjualan = $penjualan->items()->create([
                 "barang_id" => $barangId,
                 "jumlah" => $item["jumlah"],
                 "harga_satuan" => $item["harga_jual"],
             ]);
 
+            $itemPenjualanSubtotal = ItemPenjualan::query()
+                ->where("id", $itemPenjualan->id)
+                ->selectRaw("jumlah * harga_satuan AS subtotal")
+                ->value("subtotal");
+
+            $itemPenjualan->transaksi_keuangan()->create([
+                "tanggal_transaksi" => today(),
+                "jumlah" => $itemPenjualanSubtotal,
+            ]);
+
             /** @var Barang $barang */
             $barang = Barang::query()->findOrFail($barangId);
 
-            $inventory->removeByBarang(
+            $inventory->removeStockByBarang(
                 $barang,
                 $item["jumlah"],
                 $itemPenjualan,
