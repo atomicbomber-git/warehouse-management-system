@@ -30,13 +30,19 @@ class StockSeeder extends Seeder
                 $tanggalMasuk = now();
                 $tanggalKadaluarsa = $tanggalMasuk->clone()->addDays(rand(0, 14));
 
-                Stock::query()->create([
+                /** @var Stock $stock */
+                $stock = Stock::query()->create([
                     "barang_id" => $barang->id,
                     "pemasok_id" => $pemasok->id,
                     "jumlah" => rand(1, 10),
                     "harga_satuan" => rand(5, 20) * 500,
                     "tanggal_masuk" => $tanggalMasuk,
                     "tanggal_kadaluarsa" => $tanggalKadaluarsa,
+                ]);
+
+                $stock->transaksis()->create([
+                    "waktu_transaksi" => now(),
+                    "jumlah" => $stock->jumlah,
                 ]);
             }
         }

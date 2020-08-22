@@ -7,6 +7,7 @@ use App\QueryBuilders\StockBuilder;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Stock extends Model
 {
@@ -33,5 +34,10 @@ class Stock extends Model
     public function pemasok(): BelongsTo
     {
         return $this->belongsTo(Pemasok::class);
+    }
+
+    public function transaksis(): HasMany
+    {
+        return $this->hasMany(TransaksiStock::class);
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Pemasok;
 use Illuminate\Contracts\Routing\ResponseFactory;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
 class PemasokSearchController extends Controller
@@ -24,6 +25,9 @@ class PemasokSearchController extends Controller
     public function index(Request $request)
     {
         $paginator = Pemasok::query()
+            ->when($request->query("term"), function (Builder $builder, $term) {
+                $builder->where("nama", "like", "%$term%");
+            })
             ->orderBy("nama")
             ->paginate();
 

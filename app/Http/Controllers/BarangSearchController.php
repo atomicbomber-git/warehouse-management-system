@@ -28,7 +28,7 @@ class BarangSearchController extends Controller
     {
         $paginator = Barang::query()
             ->when($request->query("term"), function (Builder $builder, $term) {
-                $builder->where("nama", "like", "$term%");
+                $builder->where("nama", "like", "%$term%");
             })
             ->orderBy("nama")
             ->paginate();

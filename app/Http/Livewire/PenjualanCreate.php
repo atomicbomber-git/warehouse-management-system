@@ -6,6 +6,7 @@ use App\Barang;
 use App\Constants\MessageState;
 use App\Exceptions\QuantityExceedsCurrentStockException;
 use App\Penjualan;
+use App\Repositories\Inventory;
 use App\Stock;
 use App\Support\SessionHelper;
 use Exception;
@@ -31,7 +32,7 @@ class PenjualanCreate extends Component
         $this->items = [];
     }
 
-    public function submit()
+    public function submit(Inventory $inventory)
     {
         $data = $this->getValidatedData();
 
@@ -43,15 +44,24 @@ class PenjualanCreate extends Component
             "tanggal_penjualan" => $this->tanggal_penjualan,
         ]);
 
+        DB::beginTransaction();
+
         foreach ($data["items"] as $barangId => $item) {
-            $penjualan->items()->create([
+            $itemPenjualan = $penjualan->items()->create([
                 "barang_id" => $barangId,
                 "jumlah" => $item["jumlah"],
                 "harga_satuan" => $item["harga_jual"],
             ]);
-        }
 
-        $this->adjustStock($data["items"]);
+            /** @var Barang $barang */
+            $barang = Barang::query()->findOrFail($barangId);
+
+            $inventory->removeByBarang(
+                $barang,
+                $item["jumlah"],
+                $itemPenjualan,
+            );
+        }
 
         DB::commit();
 
@@ -88,47 +98,6 @@ class PenjualanCreate extends Component
                 },
             ]
         ]);
-    }
-
-    public function adjustStock($items)
-    {
-        foreach ($items as $barangId => $item) {
-            $runningTotal = 0;
-
-            Stock::query()
-                ->orderBy("tanggal_kadaluarsa")
-                ->where("barang_id", $barangId)
-                ->get()
-                ->map(function (Stock $stock) use ($item, &$runningTotal) {
-                    $to_be_used = 0;
-
-                    if ($runningTotal < $item["jumlah"]) {
-                        $previousRunningTotal = $runningTotal;
-                        $runningTotal += $stock->jumlah;
-                        $to_be_used = $stock->jumlah;
-
-                        if ($runningTotal >= $item["jumlah"]) {
-                            $to_be_used = $item["jumlah"] - $previousRunningTotal;
-                        }
-                    }
-
-                    return [
-                        "stock" => $stock,
-                        "to_be_used" => $to_be_used,
-                    ];
-                })
-                ->filter(function ($stockData) {
-                    return $stockData["to_be_used"] > 0;
-                })
-                ->each(function ($stockData) {
-                    if ($stockData["to_be_used"] === $stockData["stock"]->jumlah) {
-                        $stockData["stock"]->delete();
-                        return;
-                    }
-
-                    $stockData["stock"]->decrement("jumlah", $stockData["to_be_used"]);
-                });
-        }
     }
 
     public function removeItem($barangId)

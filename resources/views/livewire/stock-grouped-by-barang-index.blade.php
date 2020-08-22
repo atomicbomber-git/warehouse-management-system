@@ -27,7 +27,7 @@
                                 {{ $barang->nama }}
                                 @if($barang->has_alert)
                                     <span class="badge badge-pill badge-danger">
-                                        Stock Hampir Habis
+                                        Stock Hampir Habis / Habis
                                     </span>
                                 @endif
                             </td>

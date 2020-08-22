@@ -100,6 +100,7 @@
                                     </td>
                                     <td class="text-center">
                                         <button
+                                                type="button"
                                                 x-data="{}"
                                                 x-on:click="
                                                     window.confirmDialog()

@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Barang;
 use App\Constants\MessageState;
+use App\Repositories\Inventory;
 use App\Stock;
 use App\Support\SessionHelper;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
@@ -26,12 +27,16 @@ class StockByBarangIndex extends Component
         $this->barangId = $barangId;
     }
 
-    public function deleteStock($stockId)
+    public function deleteStock($stockId, Inventory $inventory)
     {
         try {
-            Stock::query()
-                ->where("id", $stockId)
-                ->delete();
+            /** @var Stock $stock */
+            $stock = Stock::query()->findOrFail($stockId);
+
+            $inventory->adjust(
+                $stock,
+                -$stock->jumlah,
+            );
 
             SessionHelper::flashMessage(
                 __("messages.delete.success"),
@@ -56,6 +61,7 @@ class StockByBarangIndex extends Component
     {
         return $this->getBarangProperty()->stocks()
             ->select("*")
+            ->where("jumlah", ">", 0)
             ->withSubtotal()
             ->withHasAlert()
             ->with("pemasok")

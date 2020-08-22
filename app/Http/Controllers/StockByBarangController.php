@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Barang;
 use App\Constants\MessageState;
 use App\Pemasok;
+use App\Repositories\Inventory;
 use App\Stock;
 use App\Support\SessionHelper;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 
 class StockByBarangController extends Controller
@@ -53,7 +55,7 @@ class StockByBarangController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request, Barang $barang)
+    public function store(Request $request, Barang $barang, Inventory $inventory)
     {
         $data = $request->validate([
             "pemasok_id" => ["required", Rule::exists(Pemasok::class, "id")],
@@ -63,7 +65,7 @@ class StockByBarangController extends Controller
             "harga_satuan" => ["required", "numeric", "gte:0"],
         ]);
 
-        $barang->stocks()->create($data);
+        $inventory->store($barang, $data);
 
         SessionHelper::flashMessage(
             __("messages.create.success"),
