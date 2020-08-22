@@ -29,6 +29,13 @@ class Formatter
     {
         return app(DateFactory::class)
             ->make($value)
+            ->format("d F Y");
+    }
+
+    public function dayAndDate($value)
+    {
+        return app(DateFactory::class)
+            ->make($value)
             ->format("l, d F Y");
     }
 }

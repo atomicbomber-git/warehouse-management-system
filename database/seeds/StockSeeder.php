@@ -27,23 +27,42 @@ class StockSeeder extends Seeder
 
         foreach ($pemasoks as $pemasok) {
             foreach ($barangs as $barang) {
-                if (rand(0, 3) === 0) {
-                    continue;
-                }
+//                if (rand(0, 3) > 0) {
+//                    $this->seedNearKadaluarsa($inventory, $barang, $pemasok);
+//                }
 
-                $tanggalMasuk = now();
-                $tanggalKadaluarsa = $tanggalMasuk->clone()->addDays(rand(0, 14));
-
-                $inventory->purchaseBarang($barang, [
-                    "pemasok_id" => $pemasok->id,
-                    "jumlah" => rand(1, 10),
-                    "harga_satuan" => rand(5, 20) * 500,
-                    "tanggal_masuk" => $tanggalMasuk,
-                    "tanggal_kadaluarsa" => $tanggalKadaluarsa,
-                ]);
+                $this->seedRegular($inventory, $barang, $pemasok);
             }
         }
 
         DB::commit();
+    }
+
+    public function seedNearKadaluarsa(Inventory $inventory, $barang, $pemasok): void
+    {
+        $tanggalMasuk = now();
+        $tanggalKadaluarsa = $tanggalMasuk->clone()->addDays(rand(0, 14));
+
+        $inventory->purchaseBarang($barang, [
+            "pemasok_id" => $pemasok->id,
+            "jumlah" => rand(1, 10),
+            "harga_satuan" => rand(5, 20) * 500,
+            "tanggal_masuk" => $tanggalMasuk,
+            "tanggal_kadaluarsa" => $tanggalKadaluarsa,
+        ]);
+    }
+
+    public function seedRegular(Inventory $inventory, $barang, $pemasok): void
+    {
+        $tanggalMasuk = now()->subDays(rand(0, 365));
+        $tanggalKadaluarsa = $tanggalMasuk->clone()->addDays(rand(0, 14));
+
+        $inventory->purchaseBarang($barang, [
+            "pemasok_id" => $pemasok->id,
+            "jumlah" => rand(1, 10),
+            "harga_satuan" => rand(5, 20) * 500,
+            "tanggal_masuk" => $tanggalMasuk,
+            "tanggal_kadaluarsa" => $tanggalKadaluarsa,
+        ]);
     }
 }

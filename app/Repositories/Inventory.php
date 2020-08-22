@@ -18,10 +18,10 @@ class Inventory
         /** @var Stock $stock */
         $stock = $barang->stocks()->create($data);
 
-        $transaksiStock = $this->adjust($stock, $stock->jumlah);
+        $transaksiStock = $this->adjust($stock, $stock->jumlah, $data["tanggal_masuk"]);
 
         $transaksiStock->transaksi_keuangan()->create([
-            "tanggal_transaksi" => today(),
+            "tanggal_transaksi" => $data["tanggal_masuk"],
             "jumlah" => -$transaksiStock->stock()
                 ->selectRaw("jumlah * harga_satuan as subtotal")
                 ->value("subtotal"),

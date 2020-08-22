@@ -5,20 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/TransaksiKeuangan.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_22_162159_create_transaksi_keuangan_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StockByBarangController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StockByBarangController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/LaporanKeuanganIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/LaporanKeuanganIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PenjualanCreate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PenjualanCreate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/StockByBarangIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/StockByBarangIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ItemPenjualan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ItemPenjualan.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Inventory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Inventory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Stock.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Stock.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/TransaksiStock.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TransaksiStock.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_22_100221_create_transaksi_stock_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_22_100221_create_transaksi_stock_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PenjualanSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PenjualanSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Support/Formatter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Support/Formatter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeds/StockSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/StockSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/laporan-keuangan-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/laporan-keuangan-index.blade.php" afterDir="false" />
     </list>
@@ -201,6 +192,7 @@
       <workItem from="1598069396109" duration="5988000" />
       <workItem from="1598078375618" duration="599000" />
       <workItem from="1598087914102" duration="5216000" />
+      <workItem from="1598099858486" duration="2813000" />
     </task>
     <servers />
   </component>
@@ -239,10 +231,10 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="562" y="169" width="786" height="710" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1598072020121" />
-    <state x="692" y="239" width="525" height="570" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1597989200347">
+    <state x="692" y="239" width="525" height="570" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1598100954386">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="692" y="239" width="525" height="570" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.0.1920.1053@0.0.1920.1053" timestamp="1597989200347" />
+    <state x="692" y="239" width="525" height="570" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.0.1920.1053@0.0.1920.1053" timestamp="1598100954386" />
     <state x="602" y="148" width="705" height="753" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1" timestamp="1597996017439">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
@@ -297,10 +289,10 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="455" y="232" width="1009" height="1469" key="run.anything.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1597932468329" />
-    <state x="322" y="0" width="718" height="1036" key="search.everywhere.popup" timestamp="1598093105349">
-      <screen x="0" y="0" width="1366" height="742" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1598100888941">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="322" y="0" width="718" height="1036" key="search.everywhere.popup/0.0.1366.742@0.0.1366.742" timestamp="1598093105349" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598077652002" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598100888941" />
   </component>
 </project>

@@ -3,6 +3,41 @@
         Laporan Keuangan
     </h1>
 
+    <div class="py-3 form-inline">
+        <div class="form-group mr-2">
+            <label for="filterType" class="mr-2">
+                Tipe Filter:
+            </label>
+
+            <select
+                    id="filterType"
+                    wire:model="filterType"
+                    class="form-control"
+            >
+                @foreach ($filterTypes as $value => $filterName)
+                    <option value="{{ $value }}">
+                        {{ $filterName }}
+                    </option>
+                @endforeach
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="filterValue" class="mr-2">
+                Nilai Filter:
+            </label>
+
+            <input
+                    wire:model="filterValue"
+                    id="filterValue"
+                    class="form-control"
+                    type="{{ $filterInputType }}"
+            >
+        </div>
+
+    </div>
+
+
     <div>
         @if($transaksis->isNotEmpty())
             <div class="table-responsive">
@@ -42,10 +77,12 @@
                                 @endif
                             </td>
                             <td class="text-right">
-                                {{ \Facades\App\Support\Formatter::currency($transaksi->jumlah) }}
+                                <span class="{{ $transaksi->jumlah < 0 ? "text-danger" : "text-success" }} font-weight-bold">
+                                    {{ \Facades\App\Support\Formatter::currency($transaksi->jumlah) }}
+                                </span>
                             </td>
                             <td>
-                                {{ $transaksi->created_at }}
+                                {{ \Facades\App\Support\Formatter::date($transaksi->tanggal_transaksi) }}
                             </td>
                         </tr>
                     @endforeach
@@ -60,7 +97,7 @@
         @else
             <div class="alert alert-warning">
                 <i class="fas fa-exclamation-triangle"></i>
-                {{ __("messages.no_data") }}
+                {{ __("messages.errors.no_data") }}
             </div>
         @endif
     </div>
