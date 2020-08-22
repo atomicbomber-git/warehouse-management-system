@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\BarangSearchController;
+use App\Http\Controllers\LaporanKeuanganController;
 use App\Http\Controllers\PemasokController;
 use App\Http\Controllers\PemasokSearchController;
 use App\Http\Controllers\PenjualanController;
@@ -63,3 +64,6 @@ Route::resource("stock-grouped-by-barang.stock-by-barang", class_basename(StockB
     ])
     ->except(["show"])
     ->shallow();
+
+Route::resource("laporan-keuangan", class_basename(LaporanKeuanganController::class))
+    ->only(["index"]);

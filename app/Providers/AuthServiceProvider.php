@@ -26,6 +26,7 @@ class AuthServiceProvider extends ServiceProvider
     const MANAGE_ANY_PEMASOK = "manage-any-barang";
     const MANAGE_ANY_STOCK = "manage-any-stock";
     const MANAGE_ANY_PENJUALAN = "manage-any-penjualan";
+    const VIEW_LAPORAN_KEUANGAN = "view-laporan-keuangan";
 
     /**
      * Register any authentication / authorization services.
@@ -69,5 +70,11 @@ class AuthServiceProvider extends ServiceProvider
                     UserLevel::PEGAWAI,
                 ]);
         });
+
+        Gate::define(self::VIEW_LAPORAN_KEUANGAN, function (User $user) {
+            return $user->level === UserLevel::MANAGER;
+        });
+
+
     }
 }

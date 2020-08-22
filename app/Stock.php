@@ -31,6 +31,11 @@ class Stock extends Model
             ->selectRaw("harga_satuan * jumlah AS {$fieldName}");
     }
 
+    public function barang(): BelongsTo
+    {
+        return $this->belongsTo(Barang::class);
+    }
+
     public function pemasok(): BelongsTo
     {
         return $this->belongsTo(Pemasok::class);

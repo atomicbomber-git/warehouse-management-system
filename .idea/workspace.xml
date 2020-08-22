@@ -5,23 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Inventory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/TransaksiStock.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_22_100221_create_transaksi_stock_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_22_125038_add_entitas_terkait_fields_to_transaksi_stock.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/LaporanKeuanganController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/LaporanKeuanganIndex.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/laporan-keuangan/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/livewire/laporan-keuangan-index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BarangSearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BarangSearchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PemasokSearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PemasokSearchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StockByBarangController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StockByBarangController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PenjualanCreate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PenjualanCreate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/StockByBarangIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/StockByBarangIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ItemPenjualan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ItemPenjualan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Stock.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Stock.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PenjualanSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/PenjualanSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/StockSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/StockSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/penjualan-create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/penjualan-create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stock-grouped-by-barang-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stock-grouped-by-barang-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/TransaksiStock.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TransaksiStock.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +192,8 @@
       <workItem from="1597853465896" duration="72000" />
       <workItem from="1597877425675" duration="40683000" />
       <workItem from="1597972252678" duration="25852000" />
-      <workItem from="1598069396109" duration="4987000" />
+      <workItem from="1598069396109" duration="5988000" />
+      <workItem from="1598078375618" duration="599000" />
     </task>
     <servers />
   </component>
@@ -270,10 +264,10 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="1312" height="510" key="GridCell.Tab.0.right/0.0.1920.1053@0.0.1920.1053" timestamp="1597996779211" />
-    <state x="568" y="156" width="926" height="737" key="NewPhpClassDialog" timestamp="1597997505289">
+    <state x="568" y="156" width="926" height="737" key="NewPhpClassDialog" timestamp="1598077157202">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="568" y="156" width="926" height="737" key="NewPhpClassDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1597997505289" />
+    <state x="568" y="156" width="926" height="737" key="NewPhpClassDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1598077157202" />
     <state x="221" y="0" key="SettingsEditor" timestamp="1597988050736">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
@@ -294,9 +288,9 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="455" y="232" width="1009" height="1469" key="run.anything.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1597932468329" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1598076740024">
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1598077652002">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598076740024" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598077652002" />
   </component>
 </project>
