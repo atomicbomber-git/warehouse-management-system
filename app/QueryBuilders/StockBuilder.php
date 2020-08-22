@@ -35,9 +35,9 @@ class StockBuilder extends Builder
         ]);
     }
 
-    public function withHasAlert($fieldName = "has_alert", $threshold = null)
+    public function withHasAlert($fieldName = "has_alert")
     {
         return $this
-            ->selectRaw("DATE(?) >= DATE_SUB(tanggal_kadaluarsa, INTERVAL 1 WEEK) AS $fieldName", [$threshold ?? now()]);
+            ->selectRaw("DATE(?) >= DATE_SUB(tanggal_kadaluarsa, INTERVAL 1 WEEK) AS $fieldName", [now()]);
     }
 }

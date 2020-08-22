@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Constants\MessageState;
+use App\ItemPenjualan;
 use App\Penjualan;
 use App\Support\SessionHelper;
 use Livewire\Component;
@@ -22,6 +23,11 @@ class PenjualanIndex extends Component
             /** @var Penjualan $penjualan */
             $penjualan = Penjualan::query()
                 ->findOrFail($penjualanId);
+
+            $penjualan->items()->get()->each(function (ItemPenjualan $itemPenjualan) {
+                $itemPenjualan->transaksi_keuangan()->delete();
+                $itemPenjualan->transaksi_stocks()->delete();
+            });
 
             $penjualan->items()->delete();
             $penjualan->delete();

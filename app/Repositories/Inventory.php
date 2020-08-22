@@ -16,8 +16,6 @@ class Inventory
     {
         DB::beginTransaction();
 
-
-
         /** @var Stock $stock */
         $stock = $barang->stocks()->create(Arr::except($data, "jumlah"));
 
@@ -29,7 +27,7 @@ class Inventory
 
         $transaksiStock->transaksi_keuangan()->create([
             "tanggal_transaksi" => $data["tanggal_masuk"],
-            "jumlah" => Stock::query()
+            "jumlah" => -Stock::query()
                 ->whereKey($stock->id)
                 ->withSubtotal()
                 ->value("subtotal"),
@@ -79,7 +77,9 @@ class Inventory
     {
         $runningTotal = 0;
 
-        $barang->stocks()
+        Stock::query()
+            ->where("barang_id", $barang->id)
+            ->withJumlah()
             ->orderBy("tanggal_kadaluarsa")
             ->get()
             ->map(function (Stock $stock) use ($jumlah, &$runningTotal) {
