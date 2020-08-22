@@ -14,6 +14,7 @@ class BarangBuilder extends Builder
         return $this
             ->addSelect([
                 $fieldName => Stock::query()
+                    ->join("transaksi_stock", "transaksi_stock.stock_id", "=", "stock.id")
                     ->selectRaw("COALESCE(SUM(jumlah), 0)")
                     ->whereColumn("barang.id", "=", "stock.barang_id")
             ]);
@@ -24,6 +25,7 @@ class BarangBuilder extends Builder
         return $this
             ->addSelect([
                 $fieldName => Stock::query()
+                    ->join("transaksi_stock", "transaksi_stock.stock_id", "=", "stock.id")
                     ->selectRaw("COALESCE(SUM(jumlah), 0) < ?", [$threshold])
                     ->whereColumn("barang.id", "=", "stock.barang_id")
             ]);

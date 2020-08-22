@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/LaporanKeuanganIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/LaporanKeuanganIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/StockByBarangIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/StockByBarangIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/StockGroupedByBarangIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/StockGroupedByBarangIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/QueryBuilders/BarangBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/QueryBuilders/BarangBuilder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/QueryBuilders/StockBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/QueryBuilders/StockBuilder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repositories/Inventory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Inventory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Support/Formatter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Support/Formatter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/StockSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/StockSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Stock.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Stock.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_19_160420_create_stock_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_19_160420_create_stock_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/laporan-keuangan-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/laporan-keuangan-index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,7 +194,7 @@
       <workItem from="1598069396109" duration="5988000" />
       <workItem from="1598078375618" duration="599000" />
       <workItem from="1598087914102" duration="5216000" />
-      <workItem from="1598099858486" duration="2813000" />
+      <workItem from="1598099858486" duration="7531000" />
     </task>
     <servers />
   </component>
@@ -227,10 +229,10 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="644" y="135" width="621" height="778" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1597987321783" />
-    <state x="562" y="169" width="786" height="710" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598072020121">
+    <state x="562" y="169" width="786" height="710" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598106494864">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="562" y="169" width="786" height="710" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1598072020121" />
+    <state x="562" y="169" width="786" height="710" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1598106494864" />
     <state x="692" y="239" width="525" height="570" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1598100954386">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
@@ -247,22 +249,22 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="637" y="169" width="636" height="710" key="FileChooserDialogImpl/0.0.1920.1053@0.0.1920.1053" timestamp="1597930290958" />
-    <state width="1312" height="510" key="GridCell.Tab.0.bottom" timestamp="1597996779211">
+    <state width="1284" height="505" key="GridCell.Tab.0.bottom" timestamp="1598107762414">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state width="1312" height="510" key="GridCell.Tab.0.bottom/0.0.1920.1053@0.0.1920.1053" timestamp="1597996779211" />
-    <state width="1312" height="510" key="GridCell.Tab.0.center" timestamp="1597996779211">
+    <state width="1284" height="505" key="GridCell.Tab.0.bottom/0.0.1920.1053@0.0.1920.1053" timestamp="1598107762414" />
+    <state width="1284" height="505" key="GridCell.Tab.0.center" timestamp="1598107762413">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state width="1312" height="510" key="GridCell.Tab.0.center/0.0.1920.1053@0.0.1920.1053" timestamp="1597996779211" />
-    <state width="1312" height="510" key="GridCell.Tab.0.left" timestamp="1597996779211">
+    <state width="1284" height="505" key="GridCell.Tab.0.center/0.0.1920.1053@0.0.1920.1053" timestamp="1598107762413" />
+    <state width="1284" height="505" key="GridCell.Tab.0.left" timestamp="1598107762411">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state width="1312" height="510" key="GridCell.Tab.0.left/0.0.1920.1053@0.0.1920.1053" timestamp="1597996779211" />
-    <state width="1312" height="510" key="GridCell.Tab.0.right" timestamp="1597996779211">
+    <state width="1284" height="505" key="GridCell.Tab.0.left/0.0.1920.1053@0.0.1920.1053" timestamp="1598107762411" />
+    <state width="1284" height="505" key="GridCell.Tab.0.right" timestamp="1598107762414">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state width="1312" height="510" key="GridCell.Tab.0.right/0.0.1920.1053@0.0.1920.1053" timestamp="1597996779211" />
+    <state width="1284" height="505" key="GridCell.Tab.0.right/0.0.1920.1053@0.0.1920.1053" timestamp="1598107762414" />
     <state x="568" y="156" width="926" height="737" key="NewPhpClassDialog" timestamp="1598077157202">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
@@ -280,19 +282,19 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="590" y="0" width="729" height="1051" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1053@0.0.1920.1053" timestamp="1597888636415" />
-    <state x="383" y="82" width="672" height="606" key="find.popup" timestamp="1598092962687">
-      <screen x="0" y="0" width="1366" height="742" />
+    <state x="539" y="117" width="842" height="816" key="find.popup" timestamp="1598107663958">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="383" y="82" width="672" height="606" key="find.popup/0.0.1366.742@0.0.1366.742" timestamp="1598092962687" />
-    <state x="539" y="117" width="842" height="816" key="find.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598072553573" />
+    <state x="539" y="117" width="842" height="816" key="find.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598107663958" />
     <state x="455" y="232" width="1009" height="1469" key="run.anything.popup" timestamp="1597932468329">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="455" y="232" width="1009" height="1469" key="run.anything.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1597932468329" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1598100888941">
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1598108030042">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="322" y="0" width="718" height="1036" key="search.everywhere.popup/0.0.1366.742@0.0.1366.742" timestamp="1598093105349" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598100888941" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598108030042" />
   </component>
 </project>

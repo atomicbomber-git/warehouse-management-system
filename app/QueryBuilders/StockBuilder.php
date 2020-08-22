@@ -4,15 +4,35 @@
 namespace App\QueryBuilders;
 
 
+use App\TransaksiStock;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Facades\DB;
 
 class StockBuilder extends Builder
 {
-    public function withSubtotal($fieldName = "subtotal")
+    public function hasPositiveStock()
     {
         return $this
-            ->selectRaw("harga_satuan * jumlah AS $fieldName");
+            ->whereHas("transaksis", function (Builder $builder) {
+                $builder->havingRaw("SUM(jumlah) > ?", [0]);
+            });
+    }
+
+    public function withJumlah()
+    {
+        return $this->addSelect([
+            "jumlah" => TransaksiStock::query()
+                ->selectRaw("SUM(jumlah)")
+                ->whereColumn("stock_id", "=", "stock.id")
+        ]);
+    }
+
+    public function withSubtotal($fieldName = "subtotal")
+    {
+        return $this->addSelect([
+            "subtotal" => TransaksiStock::query()
+                ->selectRaw("SUM(jumlah) * harga_satuan")
+                ->whereColumn("stock_id", "=", "stock.id")
+        ]);
     }
 
     public function withHasAlert($fieldName = "has_alert", $threshold = null)

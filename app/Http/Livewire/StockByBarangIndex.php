@@ -8,6 +8,7 @@ use App\Repositories\Inventory;
 use App\Stock;
 use App\Support\SessionHelper;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -57,9 +58,11 @@ class StockByBarangIndex extends Component
 
     public function getStocksProperty(): LengthAwarePaginator
     {
-        return $this->getBarangProperty()->stocks()
+        return Stock::query()
+            ->where("barang_id", $this->barangId)
             ->select("*")
-            ->where("jumlah", ">", 0)
+            ->hasPositiveStock()
+            ->withJumlah()
             ->withSubtotal()
             ->withHasAlert()
             ->with("pemasok")

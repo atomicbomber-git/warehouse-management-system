@@ -7,6 +7,7 @@ namespace App\Repositories;
 use App\Barang;
 use App\Stock;
 use App\TransaksiStock;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 
 class Inventory
@@ -15,15 +16,22 @@ class Inventory
     {
         DB::beginTransaction();
 
-        /** @var Stock $stock */
-        $stock = $barang->stocks()->create($data);
 
-        $transaksiStock = $this->adjust($stock, $stock->jumlah, $data["tanggal_masuk"]);
+
+        /** @var Stock $stock */
+        $stock = $barang->stocks()->create(Arr::except($data, "jumlah"));
+
+        $transaksiStock = $this->adjust(
+            $stock,
+            $data["jumlah"],
+            $data["tanggal_masuk"]
+        );
 
         $transaksiStock->transaksi_keuangan()->create([
             "tanggal_transaksi" => $data["tanggal_masuk"],
-            "jumlah" => -$transaksiStock->stock()
-                ->selectRaw("jumlah * harga_satuan as subtotal")
+            "jumlah" => Stock::query()
+                ->whereKey($stock->id)
+                ->withSubtotal()
                 ->value("subtotal"),
         ]);
 
@@ -32,24 +40,23 @@ class Inventory
 
     public function returnStock(Stock $stock)
     {
-        $originalStockSubtotal = Stock::query()
-            ->where("id", $stock->id)
-            ->selectRaw("jumlah * harga_satuan AS subtotal")
-            ->value("subtotal");
+        $originalStock = Stock::query()
+            ->whereKey( $stock->id)
+            ->withJumlah()
+            ->withSubtotal()
+            ->first();
 
-        $transaksiStock = $this->adjust($stock, $stock->jumlah);
+        $transaksiStock = $this->adjust($stock, -$originalStock->jumlah);
 
         $transaksiStock->transaksi_keuangan()->create([
             "tanggal_transaksi" => today(),
-            "jumlah" => $originalStockSubtotal,
+            "jumlah" => $originalStock->subtotal,
         ]);
     }
 
     public function adjust(Stock $stock, $jumlah, $waktu = null, $entitasTerkait = null)
     {
         DB::beginTransaction();
-
-        $stock->increment("jumlah", $jumlah);
 
         /** @var TransaksiStock $transaksiStock */
         $transaksiStock = $stock->transaksis()->create([

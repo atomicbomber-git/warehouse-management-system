@@ -15,6 +15,10 @@ class Stock extends Model
     protected $table = "stock";
     protected $guarded = [];
 
+    protected $casts = [
+        "jumlah" => "double",
+    ];
+
     public static function query(): StockBuilder
     {
         return parent::query();

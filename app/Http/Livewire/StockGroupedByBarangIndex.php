@@ -16,6 +16,7 @@ class StockGroupedByBarangIndex extends Component
             "barangs" => Barang::query()
                 ->withStock()
                 ->withHasAlert()
+                ->orderBy("nama")
                 ->paginate()
         ]);
     }
