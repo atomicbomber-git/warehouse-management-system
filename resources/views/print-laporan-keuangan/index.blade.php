@@ -40,7 +40,7 @@
 
             <h4 style="text-align: center; text-transform: uppercase">
                 @if($filterType == \App\Repositories\LaporanKeuangan::FILTER_TYPE_DAY)
-                    Tanggal {{ \Facades\App\Support\Formatter::dayAndDate($filterValue) }}
+                    {{ \Facades\App\Support\Formatter::dayAndDate($filterValue) }}
                 @elseif($filterType == \App\Repositories\LaporanKeuangan::FILTER_TYPE_MONTH)
                     {{ \Facades\App\Support\Formatter::monthAndYear($filterValue) }}
                 @elseif($filterType == \App\Repositories\LaporanKeuangan::FILTER_TYPE_YEAR)

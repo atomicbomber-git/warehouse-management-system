@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div>
-                <a href="{{ route("print-laporan-keuangan.index", request()->query()) }}" class="btn btn-dark">
+                <a href="{{ route("print-laporan-keuangan.index", ["filterType" => $filterType, "filterValue" => $filterValue]) }}" class="btn btn-dark">
                     Cetak Laporan
                     <i class="fas fa-print"></i>
                 </a>
