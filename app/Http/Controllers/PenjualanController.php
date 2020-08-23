@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Penjualan;
+use App\Providers\AuthServiceProvider;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Request;
 
@@ -23,6 +24,7 @@ class PenjualanController extends Controller
      */
     public function index()
     {
+        $this->authorize(AuthServiceProvider::MANAGE_ANY_PENJUALAN);
         return $this->responseFactory->view("penjualan.index");
     }
 
@@ -33,18 +35,8 @@ class PenjualanController extends Controller
      */
     public function create()
     {
+        $this->authorize(AuthServiceProvider::MANAGE_ANY_PENJUALAN);
         return $this->responseFactory->view("penjualan.create");
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
     }
 
     /**
