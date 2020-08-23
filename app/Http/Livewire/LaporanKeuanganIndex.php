@@ -112,7 +112,7 @@ QUERY
                                 ->whereYear("tanggal_transaksi", $year)
                                 ->addSelect([
                                     DB::raw(/** @lang MariaDB */ "
-                                        (SUM(jumlah) OVER (ORDER BY tanggal_transaksi, id))
+                                        + (SUM(jumlah) OVER (ORDER BY tanggal_transaksi, id))
                                         + (
                                             SELECT
                                                 COALESCE(SUM(jumlah), 0) FROM transaksi_keuangan 
@@ -130,8 +130,8 @@ QUERY
                                 ->whereYear("tanggal_transaksi", $this->filterValue)
                                 ->addSelect([
                                     DB::raw(/** @lang MariaDB */ "
-                                        (SUM(jumlah) OVER (ORDER BY tanggal_transaksi, id)) +
-                                        (SELECT COALESCE(SUM(jumlah), 0) FROM transaksi_keuangan WHERE YEAR(tanggal_transaksi) < '$this->filterValue')
+                                        + (SUM(jumlah) OVER (ORDER BY tanggal_transaksi, id))
+                                        + (SELECT COALESCE(SUM(jumlah), 0) FROM transaksi_keuangan WHERE YEAR(tanggal_transaksi) < '$this->filterValue')
                                         + COALESCE((SELECT jumlah FROM saldo_awal LIMIT 1), 0)
                                       
                                         AS saldo

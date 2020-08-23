@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/LaporanKeuanganIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/LaporanKeuanganIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/laporan-keuangan-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/laporan-keuangan-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/penjualan-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/penjualan-index.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -194,7 +186,7 @@
       <workItem from="1598078375618" duration="599000" />
       <workItem from="1598087914102" duration="5216000" />
       <workItem from="1598099858486" duration="10657000" />
-      <workItem from="1598146035524" duration="21657000" />
+      <workItem from="1598146035524" duration="21965000" />
     </task>
     <servers />
   </component>
@@ -257,22 +249,22 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="637" y="169" width="636" height="710" key="FileChooserDialogImpl/0.0.1920.1053@0.0.1920.1053" timestamp="1597930290958" />
-    <state width="1269" height="490" key="GridCell.Tab.0.bottom" timestamp="1598172751761">
+    <state width="1269" height="490" key="GridCell.Tab.0.bottom" timestamp="1598173346450">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state width="1269" height="490" key="GridCell.Tab.0.bottom/0.0.1920.1053@0.0.1920.1053" timestamp="1598172751761" />
-    <state width="1269" height="490" key="GridCell.Tab.0.center" timestamp="1598172751759">
+    <state width="1269" height="490" key="GridCell.Tab.0.bottom/0.0.1920.1053@0.0.1920.1053" timestamp="1598173346450" />
+    <state width="1269" height="490" key="GridCell.Tab.0.center" timestamp="1598173346450">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state width="1269" height="490" key="GridCell.Tab.0.center/0.0.1920.1053@0.0.1920.1053" timestamp="1598172751759" />
-    <state width="1269" height="490" key="GridCell.Tab.0.left" timestamp="1598172751758">
+    <state width="1269" height="490" key="GridCell.Tab.0.center/0.0.1920.1053@0.0.1920.1053" timestamp="1598173346450" />
+    <state width="1269" height="490" key="GridCell.Tab.0.left" timestamp="1598173346449">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state width="1269" height="490" key="GridCell.Tab.0.left/0.0.1920.1053@0.0.1920.1053" timestamp="1598172751758" />
-    <state width="1269" height="490" key="GridCell.Tab.0.right" timestamp="1598172751760">
+    <state width="1269" height="490" key="GridCell.Tab.0.left/0.0.1920.1053@0.0.1920.1053" timestamp="1598173346449" />
+    <state width="1269" height="490" key="GridCell.Tab.0.right" timestamp="1598173346450">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state width="1269" height="490" key="GridCell.Tab.0.right/0.0.1920.1053@0.0.1920.1053" timestamp="1598172751760" />
+    <state width="1269" height="490" key="GridCell.Tab.0.right/0.0.1920.1053@0.0.1920.1053" timestamp="1598173346450" />
     <state x="568" y="156" width="926" height="737" key="NewPhpClassDialog" timestamp="1598077157202">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
