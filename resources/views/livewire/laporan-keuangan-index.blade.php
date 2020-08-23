@@ -38,13 +38,17 @@
                 </div>
             </div>
             <div>
-                <a href="{{ route("saldo-awal.edit", $saldo_awal) }}" class="btn btn-primary">
+                <a href="{{ route("print-laporan-keuangan.index", request()->query()) }}" class="btn btn-dark">
+                    Cetak Laporan
+                    <i class="fas fa-print"></i>
+                </a>
+
+                <a href="{{ route("saldo-awal.edit",  $saldo_awal) }}" class="btn btn-primary">
                     Ubah Saldo Awal
                 </a>
             </div>
         </div>
     </div>
-
 
     <div>
         @if($transaksis->isNotEmpty())

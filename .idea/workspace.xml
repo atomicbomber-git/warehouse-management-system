@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SaldoAwalController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/saldo-awal/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/saldo-awal/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/saldo-awal/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PrintLaporanKeuanganController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/LaporanKeuangan.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/print-laporan-keuangan/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Livewire/LaporanKeuanganIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/LaporanKeuanganIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PenjualanIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PenjualanIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/Inventory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Inventory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_23_134055_create_saldo_awal_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_23_134055_create_saldo_awal_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/laporan-keuangan-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/laporan-keuangan-index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
@@ -200,7 +197,7 @@
       <workItem from="1598078375618" duration="599000" />
       <workItem from="1598087914102" duration="5216000" />
       <workItem from="1598099858486" duration="10657000" />
-      <workItem from="1598146035524" duration="24788000" />
+      <workItem from="1598146035524" duration="27341000" />
     </task>
     <servers />
   </component>
@@ -247,14 +244,22 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="562" y="169" width="786" height="710" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1598177339739" />
-    <state x="692" y="239" width="525" height="570" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1598100954386">
+    <state x="692" y="239" width="525" height="570" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1598180340903">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="692" y="239" width="525" height="570" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.0.1920.1053@0.0.1920.1053" timestamp="1598100954386" />
+    <state x="692" y="239" width="525" height="570" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.0.1920.1053@0.0.1920.1053" timestamp="1598180340903" />
     <state x="602" y="148" width="705" height="753" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1" timestamp="1597996017439">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="602" y="148" width="705" height="753" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1920.1053@0.0.1920.1053" timestamp="1597996017439" />
+    <state x="581" y="358" width="747" height="332" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1598180916820">
+      <screen x="0" y="0" width="1920" height="1053" />
+    </state>
+    <state x="581" y="358" width="747" height="332" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.0.1920.1053@0.0.1920.1053" timestamp="1598180916820" />
+    <state x="628" y="289" width="653" height="470" key="#com.jetbrains.php.refactoring.move.member.PhpMoveMemberDialog#" timestamp="1598180946273">
+      <screen x="0" y="0" width="1920" height="1053" />
+    </state>
+    <state x="628" y="289" width="653" height="470" key="#com.jetbrains.php.refactoring.move.member.PhpMoveMemberDialog#/0.0.1920.1053@0.0.1920.1053" timestamp="1598180946273" />
     <state x="633" y="414" width="644" height="220" key="ComposerInitDialogKey" timestamp="1597882563088">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
@@ -283,10 +288,10 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="568" y="156" width="926" height="737" key="NewPhpClassDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1598077157202" />
-    <state x="221" y="0" width="1467" height="1053" key="SettingsEditor" timestamp="1598170336768">
+    <state x="221" y="0" width="1457" height="1053" key="SettingsEditor" timestamp="1598180481650">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="221" y="0" width="1467" height="1053" key="SettingsEditor/0.0.1920.1053@0.0.1920.1053" timestamp="1598170336768" />
+    <state x="221" y="0" width="1457" height="1053" key="SettingsEditor/0.0.1920.1053@0.0.1920.1053" timestamp="1598180481650" />
     <state x="553" y="134" width="930" height="786" key="StructurePopup" timestamp="1598160508674">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
@@ -305,14 +310,14 @@
     </state>
     <state x="383" y="82" width="672" height="606" key="find.popup/0.0.1366.742@0.0.1366.742" timestamp="1598092962687" />
     <state x="539" y="117" width="842" height="816" key="find.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598170368561" />
-    <state x="455" y="232" width="1009" height="1469" key="run.anything.popup" timestamp="1598173085532">
+    <state x="455" y="232" width="1009" height="1469" key="run.anything.popup" timestamp="1598182002232">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="455" y="232" width="1009" height="1469" key="run.anything.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598173085532" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1598177749560">
+    <state x="455" y="232" width="1009" height="1469" key="run.anything.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598182002232" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1598181830473">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="322" y="0" width="718" height="1036" key="search.everywhere.popup/0.0.1366.742@0.0.1366.742" timestamp="1598093105349" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598177749560" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598181830473" />
   </component>
 </project>

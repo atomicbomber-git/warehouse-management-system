@@ -4,13 +4,15 @@
 namespace App\Support;
 
 
+use Carbon\Carbon;
 use Illuminate\Support\DateFactory;
+use Illuminate\Support\Facades\Date;
 
 class Formatter
 {
     public function currency($value)
     {
-        return "Rp. " . number_format($value);
+        return number_format(abs($value));
     }
 
     public function number($value)
@@ -30,6 +32,15 @@ class Formatter
         return app(DateFactory::class)
             ->make($value)
             ->format("d F Y");
+    }
+
+    public function monthAndYear($value)
+    {
+        /** @var Carbon $date */
+        $date = app(DateFactory::class)
+            ->make($value);
+
+        return sprintf("Bulan %s Tahun %s", $date->format("F"), $date->format("Y"));
     }
 
     public function dayAndDate($value)
