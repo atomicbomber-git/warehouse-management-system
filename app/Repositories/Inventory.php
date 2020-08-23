@@ -5,9 +5,10 @@ namespace App\Repositories;
 
 
 use App\Barang;
-use App\Constants\AlasanTransaksiStock;
+use App\Constants\AlasanTransaksi;
 use App\Stock;
 use App\TransaksiStock;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 
@@ -25,12 +26,13 @@ class Inventory
             $data["jumlah"],
             [
                 "waktu" => $data["tanggal_masuk"],
-                "alasan" => AlasanTransaksiStock::PEMBELIAN,
+                "alasan" => AlasanTransaksi::PEMBELIAN,
             ]
         );
 
         $transaksiStock->transaksi_keuangan()->create([
             "tanggal_transaksi" => $data["tanggal_masuk"],
+            "alasan" => AlasanTransaksi::PEMBELIAN,
             "jumlah" => -Stock::query()
                 ->whereKey($stock->id)
                 ->withSubtotal()
@@ -40,21 +42,78 @@ class Inventory
         DB::commit();
     }
 
-    public function returnStock(Stock $stock, $options = [])
+    public function returnStock(Stock $stock, $amount = null)
     {
+        /** @var Stock $originalStock */
         $originalStock = Stock::query()
-            ->whereKey( $stock->id)
+            ->whereKey($stock->id)
             ->withJumlah()
-            ->withSubtotal()
             ->first();
 
-        $transaksiStock = $this->adjust($stock, -$originalStock->jumlah, [
-            "alasan" => AlasanTransaksiStock::PENGEMBALIAN,
+        $transaksiStock = $this->adjust($originalStock, -($amount ?? $originalStock->jumlah), [
+            "alasan" => AlasanTransaksi::PENGEMBALIAN,
         ]);
+
+        $subtotal = TransaksiStock::query()
+            ->join("stock", "stock.id", "=", "stock_id")
+            ->whereKey($transaksiStock->id)
+            ->selectRaw("jumlah * harga_satuan AS subtotal")
+            ->value("subtotal");
 
         $transaksiStock->transaksi_keuangan()->create([
             "tanggal_transaksi" => today(),
-            "jumlah" => $originalStock->subtotal,
+            "alasan" => AlasanTransaksi::PENGEMBALIAN,
+            "jumlah" => abs($subtotal),
+        ]);
+    }
+
+    public function throwAwayStock(Stock $stock, $amount = null)
+    {
+        /** @var Stock $originalStock */
+        $originalStock = Stock::query()
+            ->whereKey($stock->id)
+            ->withJumlah()
+            ->first();
+
+        $transaksiStock = $this->adjust($originalStock, -($amount ?? $originalStock->jumlah), [
+            "alasan" => AlasanTransaksi::PEMBUANGAN,
+        ]);
+
+        $subtotal = TransaksiStock::query()
+            ->join("stock", "stock.id", "=", "stock_id")
+            ->whereKey($transaksiStock->id)
+            ->selectRaw("jumlah * harga_satuan AS subtotal")
+            ->value("subtotal");
+
+        $transaksiStock->transaksi_keuangan()->create([
+            "tanggal_transaksi" => today(),
+            "alasan" => AlasanTransaksi::PEMBUANGAN,
+            "jumlah" => -abs($subtotal),
+        ]);
+    }
+
+    public function sellStock(Stock $stock, $amount = null)
+    {
+        /** @var Stock $originalStock */
+        $originalStock = Stock::query()
+            ->whereKey($stock->id)
+            ->withJumlah()
+            ->first();
+
+        $transaksiStock = $this->adjust($originalStock, -($amount ?? $originalStock->jumlah), [
+            "alasan" => AlasanTransaksi::PENJUALAN,
+        ]);
+
+        $subtotal = TransaksiStock::query()
+            ->join("stock", "stock.id", "=", "stock_id")
+            ->whereKey($transaksiStock->id)
+            ->selectRaw("jumlah * harga_satuan AS subtotal")
+            ->value("subtotal");
+
+        $transaksiStock->transaksi_keuangan()->create([
+            "tanggal_transaksi" => today(),
+            "alasan" => AlasanTransaksi::PENJUALAN,
+            "jumlah" => +abs($subtotal),
         ]);
     }
 
@@ -66,7 +125,7 @@ class Inventory
         $transaksiStock = $stock->transaksis()->create([
             "tanggal_transaksi" => $options["waktu"] ?? now(),
             "jumlah" => $jumlah,
-            "alasan" => $options["alasan"] ?? ($jumlah > 0 ? AlasanTransaksiStock::PEMBELIAN : AlasanTransaksiStock::PENJUALAN)
+            "alasan" => $options["alasan"] ?? ($jumlah > 0 ? AlasanTransaksi::PEMBELIAN : AlasanTransaksi::PENJUALAN)
         ]);
 
         if (($options["entitas_terkait"] ?? null) !== null) {
@@ -113,7 +172,9 @@ class Inventory
             ->each(function ($stockData) use ($options) {
                 /** @var Stock $stock */
                 $stock = $stockData["stock"];
-                $this->adjust($stock, -$stockData["to_be_used"], $options);
+                $this->adjust($stock, -$stockData["to_be_used"], array_merge([
+                    "alasan" => AlasanTransaksi::PENJUALAN,
+                ], $options));
             });
 
         DB::commit();

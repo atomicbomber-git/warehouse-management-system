@@ -7,7 +7,6 @@
         /
 
         {{ $barang->nama }}
-
     </h1>
 
     <div class="d-flex justify-content-end py-3">
@@ -30,7 +29,6 @@
                         <th style="width: 200px"> Pemasok </th>
                         <th class="text-right"> Jumlah </th>
                         <th class="text-right"> Harga Satuan </th>
-                        <th class="text-right"> Subtotal </th>
                         <th> @lang("app.actions") </th>
                     </tr>
                     </thead>
@@ -44,28 +42,17 @@
                                 {{ $stock->tanggal_kadaluarsa }}
                                 @if($stock->has_alert)
                                     <span class="badge badge-pill badge-danger">
-                                        Stock Hampir Kadaluarsa
+                                        Hampir Kadaluarsa
                                     </span>
                                 @endif
                             </td>
                             <td> {{ $stock->pemasok->nama }}</td>
                             <td class="text-right"> {{ \Facades\App\Support\Formatter::number($stock->jumlah) }} </td>
                             <td class="text-right"> {{ \Facades\App\Support\Formatter::currency($stock->harga_satuan) }} </td>
-                            <td class="text-right"> {{ \Facades\App\Support\Formatter::currency($stock->subtotal) }} </td>
                             <td class="text-center">
-                                <button
-                                        x-data="{}"
-                                        x-on:click="
-                                        window.confirmDialog()
-                                            .then(response => {
-                                                if (response.value) {
-                                                    window.livewire.emit('stock:delete', {{ $stock->id }})
-                                                }
-                                            })"
-                                        class="btn btn-outline-danger btn-sm"
-                                >
-                                    Hapus
-                                </button>
+                                <a href="{{ route("stock-by-barang.pengeluaran.create", $stock) }}" class="btn btn-primary btn-sm">
+                                    Pengeluaran
+                                </a>
                             </td>
                         </tr>
                     @endforeach

@@ -4,10 +4,12 @@
 namespace App\Constants;
 
 
-class AlasanTransaksiStock
+class AlasanTransaksi
 {
     const PEMBELIAN = "PEMBELIAN";
     const PENJUALAN = "PENJUALAN";
+
+    const PERBAIKAN = "PERBAIKAN";
     const PEMBUANGAN = "PEMBUANGAN";
     const PENGEMBALIAN = "PENGEMBALIAN";
 }

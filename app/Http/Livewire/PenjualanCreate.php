@@ -3,7 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Barang;
-use App\Constants\AlasanTransaksiStock;
+use App\Constants\AlasanTransaksi;
 use App\Constants\MessageState;
 use App\Exceptions\QuantityExceedsCurrentStockException;
 use App\ItemPenjualan;
@@ -64,6 +64,7 @@ class PenjualanCreate extends Component
             $itemPenjualan->transaksi_keuangan()->create([
                 "tanggal_transaksi" => today(),
                 "jumlah" => $itemPenjualanSubtotal,
+                "alasan" => AlasanTransaksi::PENJUALAN,
             ]);
 
             /** @var Barang $barang */
@@ -74,7 +75,7 @@ class PenjualanCreate extends Component
                 $item["jumlah"],
                 [
                     "entitas_terkait" => $itemPenjualan,
-                    "alasan" => AlasanTransaksiStock::PENJUALAN,
+                    "alasan" => AlasanTransaksi::PENJUALAN,
                 ],
             );
         }

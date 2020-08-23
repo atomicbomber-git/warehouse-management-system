@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Exceptions/ApplicationException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/errors/general.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PengeluaranStockController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pengeluaran-stock/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PenjualanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PenjualanController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Constants/AlasanTransaksiStock.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Constants/AlasanTransaksi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PenjualanCreate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PenjualanCreate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Inventory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Inventory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_22_162159_create_transaksi_keuangan_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_22_162159_create_transaksi_keuangan_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/laporan-keuangan-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/laporan-keuangan-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stock-by-barang-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stock-by-barang-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +152,7 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
@@ -155,7 +162,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Constants" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.sqlOptions" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -191,7 +198,7 @@
       <workItem from="1598078375618" duration="599000" />
       <workItem from="1598087914102" duration="5216000" />
       <workItem from="1598099858486" duration="10657000" />
-      <workItem from="1598146035524" duration="3536000" />
+      <workItem from="1598146035524" duration="12076000" />
     </task>
     <servers />
   </component>
@@ -202,10 +209,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="0" width="1910" height="1051" key="#Live_Templates" timestamp="1597983723975">
+    <state x="0" y="0" width="1910" height="1051" key="#Live_Templates" timestamp="1598158341034">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="0" y="0" width="1910" height="1051" key="#Live_Templates/0.0.1920.1053@0.0.1920.1053" timestamp="1597983723975" />
+    <state x="0" y="0" width="1910" height="1051" key="#Live_Templates/0.0.1920.1053@0.0.1920.1053" timestamp="1598158341034" />
     <state x="355" y="0" width="1200" height="1051" key="#Plugins" timestamp="1597928431036">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
@@ -218,14 +225,18 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="538" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1597905714523" />
+    <state x="474" y="61" width="877" height="720" key="#com.intellij.ide.actionMacro.EditMacrosDialog" timestamp="1598158214005">
+      <screen x="0" y="0" width="1920" height="1053" />
+    </state>
+    <state x="474" y="61" width="877" height="720" key="#com.intellij.ide.actionMacro.EditMacrosDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1598158214005" />
     <state x="674" y="69" width="561" height="911" key="#com.intellij.ide.util.MemberChooser" timestamp="1597987231712">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="674" y="69" width="561" height="911" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1053@0.0.1920.1053" timestamp="1597987231712" />
-    <state x="644" y="135" width="621" height="778" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1597987321783">
+    <state x="644" y="135" width="621" height="778" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1598162669680">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="644" y="135" width="621" height="778" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1597987321783" />
+    <state x="644" y="135" width="621" height="778" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1598162669680" />
     <state x="562" y="169" width="786" height="710" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598106494864">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
@@ -266,32 +277,32 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="568" y="156" width="926" height="737" key="NewPhpClassDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1598077157202" />
-    <state x="221" y="0" key="SettingsEditor" timestamp="1597988050736">
+    <state x="221" y="0" width="1467" height="1053" key="SettingsEditor" timestamp="1598160172607">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="221" y="0" key="SettingsEditor/0.0.1920.1053@0.0.1920.1053" timestamp="1597988050736" />
-    <state x="393" y="94" width="849" height="554" key="StructurePopup" timestamp="1598089373921">
-      <screen x="0" y="0" width="1366" height="742" />
+    <state x="221" y="0" width="1467" height="1053" key="SettingsEditor/0.0.1920.1053@0.0.1920.1053" timestamp="1598160172607" />
+    <state x="553" y="134" width="930" height="786" key="StructurePopup" timestamp="1598160508674">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="393" y="94" width="849" height="554" key="StructurePopup/0.0.1366.742@0.0.1366.742" timestamp="1598089373921" />
-    <state x="553" y="134" width="930" height="786" key="StructurePopup/0.0.1920.1053@0.0.1920.1053" timestamp="1598076220464" />
+    <state x="553" y="134" width="930" height="786" key="StructurePopup/0.0.1920.1053@0.0.1920.1053" timestamp="1598160508674" />
     <state x="590" y="0" width="729" height="1051" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597888636415">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="590" y="0" width="729" height="1051" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1053@0.0.1920.1053" timestamp="1597888636415" />
-    <state x="539" y="117" width="842" height="816" key="find.popup" timestamp="1598107663958">
+    <state x="539" y="117" width="842" height="816" key="find.popup" timestamp="1598162212775">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="383" y="82" width="672" height="606" key="find.popup/0.0.1366.742@0.0.1366.742" timestamp="1598092962687" />
-    <state x="539" y="117" width="842" height="816" key="find.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598107663958" />
+    <state x="539" y="117" width="842" height="816" key="find.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598162212775" />
     <state x="455" y="232" width="1009" height="1469" key="run.anything.popup" timestamp="1597932468329">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="455" y="232" width="1009" height="1469" key="run.anything.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1597932468329" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1598150423949">
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1598163138434">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="322" y="0" width="718" height="1036" key="search.everywhere.popup/0.0.1366.742@0.0.1366.742" timestamp="1598093105349" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598150423949" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598163138434" />
   </component>
 </project>

@@ -58,20 +58,12 @@
                         <tr>
                             <td> {{ $transaksis->firstItem() + $loop->index }} </td>
                             <td>
+                                {{ $transaksi->alasan }}
+
                                 @if($transaksi->entitas_terkait instanceof \App\TransaksiStock)
-                                    @if($transaksi->jumlah < 0)
-                                        Pembelian Stock
-                                    @else
-                                        Pengembalian Stock
-                                    @endif
-
                                     {{ $transaksi->entitas_terkait->stock->barang->nama }}
-
                                     ({{ $transaksi->entitas_terkait->jumlah }} {{ $transaksi->entitas_terkait->stock->barang->satuan }})
-
                                 @elseif($transaksi->entitas_terkait instanceof \App\ItemPenjualan)
-                                    Penjualan Barang
-
                                     {{ $transaksi->entitas_terkait->barang->nama }}
                                     ({{ $transaksi->entitas_terkait->jumlah }} {{ $transaksi->entitas_terkait->barang->satuan }})
                                 @endif

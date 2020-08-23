@@ -16,6 +16,7 @@ class CreateTransaksiKeuanganTable extends Migration
         Schema::create('transaksi_keuangan', function (Blueprint $table) {
             $table->increments('id');
             $table->date("tanggal_transaksi");
+            $table->string("alasan")->index()->nullable();
             $table->nullableMorphs('entitas_terkait');
             $table->decimal('jumlah', 19, 4);
             $table->timestamps();
