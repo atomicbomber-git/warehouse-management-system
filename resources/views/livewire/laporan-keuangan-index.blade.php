@@ -3,38 +3,46 @@
         Laporan Keuangan
     </h1>
 
-    <div class="py-3 form-inline">
-        <div class="form-group mr-2">
-            <label for="filterType" class="mr-2">
-                Tipe Filter:
-            </label>
+    <div class="py-3">
+        <div class="d-flex justify-content-between">
+            <div class="form-inline">
+                <div class="form-group mr-2">
+                    <label for="filterType" class="mr-2">
+                        Tipe Filter:
+                    </label>
 
-            <select
-                    id="filterType"
-                    wire:model="filterType"
-                    class="form-control"
-            >
-                @foreach ($filterTypes as $value => $filterName)
-                    <option value="{{ $value }}">
-                        {{ $filterName }}
-                    </option>
-                @endforeach
-            </select>
+                    <select
+                            id="filterType"
+                            wire:model="filterType"
+                            class="form-control"
+                    >
+                        @foreach ($filterTypes as $value => $filterName)
+                            <option value="{{ $value }}">
+                                {{ $filterName }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="filterValue" class="mr-2">
+                        Nilai Filter:
+                    </label>
+
+                    <input
+                            wire:model="filterValue"
+                            id="filterValue"
+                            class="form-control"
+                            type="{{ $filterInputType }}"
+                    >
+                </div>
+            </div>
+            <div>
+                <a href="{{ route("saldo-awal.edit", $saldo_awal) }}" class="btn btn-primary">
+                    Ubah Saldo Awal
+                </a>
+            </div>
         </div>
-
-        <div class="form-group">
-            <label for="filterValue" class="mr-2">
-                Nilai Filter:
-            </label>
-
-            <input
-                    wire:model="filterValue"
-                    id="filterValue"
-                    class="form-control"
-                    type="{{ $filterInputType }}"
-            >
-        </div>
-
     </div>
 
 

@@ -7,6 +7,7 @@ use App\Http\Controllers\PemasokController;
 use App\Http\Controllers\PemasokSearchController;
 use App\Http\Controllers\PengeluaranStockController;
 use App\Http\Controllers\PenjualanController;
+use App\Http\Controllers\SaldoAwalController;
 use App\Http\Controllers\StockByBarangController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\StockGroupedByBarangController;
@@ -70,6 +71,8 @@ Route::resource("stock-by-barang.pengeluaran", class_basename(PengeluaranStockCo
     ->parameter("stock-by-barang", "stock")
     ->only(["create", "store"]);
 
-
 Route::resource("laporan-keuangan", class_basename(LaporanKeuanganController::class))
     ->only(["index"]);
+
+Route::resource("saldo-awal", class_basename(SaldoAwalController::class))
+    ->only(["edit", "update"]);

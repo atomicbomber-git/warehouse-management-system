@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Constants\MessageState;
 use App\ItemPenjualan;
 use App\Penjualan;
+use App\SaldoAwal;
 use App\Support\SessionHelper;
 use Livewire\Component;
 use Livewire\WithPagination;

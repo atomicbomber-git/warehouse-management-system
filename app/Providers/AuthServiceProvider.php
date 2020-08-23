@@ -28,6 +28,7 @@ class AuthServiceProvider extends ServiceProvider
     const MANAGE_ANY_PENJUALAN = "manage-any-penjualan";
     const DELETE_ANY_PENJUALAN = "delete-any-penjualan";
     const VIEW_LAPORAN_KEUANGAN = "view-laporan-keuangan";
+    const MANAGE_SALDO_AWAL = "manage-saldo-awal";
 
     /**
      * Register any authentication / authorization services.
@@ -83,6 +84,8 @@ class AuthServiceProvider extends ServiceProvider
             return $user->level === UserLevel::MANAGER;
         });
 
-
+        Gate::define(self::MANAGE_SALDO_AWAL, function (User $user) {
+            return $user->level === UserLevel::MANAGER;
+        });
     }
 }

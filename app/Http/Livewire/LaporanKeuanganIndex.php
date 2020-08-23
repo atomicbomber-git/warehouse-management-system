@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\ItemPenjualan;
+use App\SaldoAwal;
 use App\TransaksiKeuangan;
 use App\TransaksiStock;
 use Exception;
@@ -80,6 +81,7 @@ class LaporanKeuanganIndex extends Component
     public function render()
     {
         return view('livewire.laporan-keuangan-index', [
+            "saldo_awal" => SaldoAwal::query()->first(),
             "filterTypes" => self::FILTER_TYPES,
             "filterInputType" => self::FILTER_INPUT_TYPES[$this->filterType],
             "transaksis" => TransaksiKeuangan::query()

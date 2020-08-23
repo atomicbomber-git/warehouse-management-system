@@ -15,7 +15,7 @@ class CreateSaldoAwalTable extends Migration
     {
         Schema::create('saldo_awal', function (Blueprint $table) {
             $table->id();
-            $table->decimal("jumlah", 19, 4);
+            $table->decimal("jumlah", 19, 4)->default(0);
             $table->timestamps();
         });
     }

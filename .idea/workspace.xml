@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="" />
+    <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SaldoAwalController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/saldo-awal/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/saldo-awal/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/saldo-awal/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/LaporanKeuanganIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/LaporanKeuanganIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PenjualanIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PenjualanIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/Inventory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/Inventory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_23_134055_create_saldo_awal_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_23_134055_create_saldo_awal_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/laporan-keuangan-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/laporan-keuangan-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -186,7 +200,7 @@
       <workItem from="1598078375618" duration="599000" />
       <workItem from="1598087914102" duration="5216000" />
       <workItem from="1598099858486" duration="10657000" />
-      <workItem from="1598146035524" duration="21965000" />
+      <workItem from="1598146035524" duration="24788000" />
     </task>
     <servers />
   </component>
@@ -229,10 +243,10 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="644" y="135" width="621" height="778" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1598162669680" />
-    <state x="562" y="169" width="786" height="710" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598106494864">
+    <state x="562" y="169" width="786" height="710" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598177339739">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="562" y="169" width="786" height="710" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1598106494864" />
+    <state x="562" y="169" width="786" height="710" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1598177339739" />
     <state x="692" y="239" width="525" height="570" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1598100954386">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
@@ -245,10 +259,10 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="633" y="414" width="644" height="220" key="ComposerInitDialogKey/0.0.1920.1053@0.0.1920.1053" timestamp="1597882563088" />
-    <state x="637" y="169" width="636" height="710" key="FileChooserDialogImpl" timestamp="1597930290958">
+    <state x="637" y="169" width="636" height="710" key="FileChooserDialogImpl" timestamp="1598175943007">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="637" y="169" width="636" height="710" key="FileChooserDialogImpl/0.0.1920.1053@0.0.1920.1053" timestamp="1597930290958" />
+    <state x="637" y="169" width="636" height="710" key="FileChooserDialogImpl/0.0.1920.1053@0.0.1920.1053" timestamp="1598175943007" />
     <state width="1269" height="490" key="GridCell.Tab.0.bottom" timestamp="1598173346450">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
@@ -295,10 +309,10 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="455" y="232" width="1009" height="1469" key="run.anything.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598173085532" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1598170789293">
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1598177749560">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="322" y="0" width="718" height="1036" key="search.everywhere.popup/0.0.1366.742@0.0.1366.742" timestamp="1598093105349" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598170789293" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598177749560" />
   </component>
 </project>

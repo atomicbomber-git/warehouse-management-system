@@ -8,7 +8,6 @@ use App\Barang;
 use App\Constants\AlasanTransaksi;
 use App\Stock;
 use App\TransaksiStock;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 
