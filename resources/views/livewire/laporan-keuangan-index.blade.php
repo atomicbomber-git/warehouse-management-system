@@ -47,7 +47,9 @@
                     <tr>
                         <th> # </th>
                         <th> Keterangan </th>
-                        <th class="text-right"> Jumlah </th>
+                        <th class="text-right"> Debit </th>
+                        <th class="text-right"> Kredit </th>
+                        <th class="text-right"> Saldo </th>
                         <th> Tanggal </th>
                     </tr>
 
@@ -69,9 +71,17 @@
                                 @endif
                             </td>
                             <td class="text-right">
-                                <span class="{{ $transaksi->jumlah < 0 ? "text-danger" : "text-success" }} font-weight-bold">
+                                @if($transaksi->jumlah < 0)
                                     {{ \Facades\App\Support\Formatter::currency($transaksi->jumlah) }}
-                                </span>
+                                @endif
+                            </td>
+                            <td class="text-right">
+                                @if($transaksi->jumlah >= 0)
+                                    {{ \Facades\App\Support\Formatter::currency($transaksi->jumlah) }}
+                                @endif
+                            </td>
+                            <td class="text-right">
+                                {{ \Facades\App\Support\Formatter::currency($transaksi->saldo) }}
                             </td>
                             <td>
                                 {{ \Facades\App\Support\Formatter::date($transaksi->tanggal_transaksi) }}

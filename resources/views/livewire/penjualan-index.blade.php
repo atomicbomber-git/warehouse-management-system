@@ -28,19 +28,21 @@
                         <td> {{ $penjualans->firstItem() + $loop->index }} </td>
                         <td> {{ $penjualan->tanggal_penjualan }} </td>
                         <td class="text-center">
-                            <button
-                                    x-data="{}"
-                                    x-on:click="
+                            @can(\App\Providers\AuthServiceProvider::DELETE_ANY_PENJUALAN)
+                                <button
+                                        x-data="{}"
+                                        x-on:click="
                                     window.confirmDialog()
                                         .then(response => {
                                             if (response.value) {
                                                 window.livewire.emit('penjualan:delete', {{ $penjualan->id }})
                                             }
                                         })"
-                                    class="btn btn-outline-danger btn-sm"
-                            >
-                                Hapus
-                            </button>
+                                        class="btn btn-outline-danger btn-sm"
+                                >
+                                    Hapus
+                                </button>
+                            @endcan
                         </td>
                     </tr>
                 @endforeach

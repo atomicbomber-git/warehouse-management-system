@@ -26,6 +26,7 @@ class AuthServiceProvider extends ServiceProvider
     const MANAGE_ANY_PEMASOK = "manage-any-barang";
     const MANAGE_ANY_STOCK = "manage-any-stock";
     const MANAGE_ANY_PENJUALAN = "manage-any-penjualan";
+    const DELETE_ANY_PENJUALAN = "delete-any-penjualan";
     const VIEW_LAPORAN_KEUANGAN = "view-laporan-keuangan";
 
     /**
@@ -68,6 +69,13 @@ class AuthServiceProvider extends ServiceProvider
                 in_array($user->level, [
                     UserLevel::MANAGER,
                     UserLevel::PEGAWAI,
+                ]);
+        });
+
+        Gate::define(self::DELETE_ANY_PENJUALAN, function (User $user) {
+            return
+                in_array($user->level, [
+                    UserLevel::MANAGER,
                 ]);
         });
 
