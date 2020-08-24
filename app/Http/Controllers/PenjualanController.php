@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Penjualan;
 use App\Providers\AuthServiceProvider;
 use Illuminate\Contracts\Routing\ResponseFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PenjualanController extends Controller
 {
@@ -47,7 +49,18 @@ class PenjualanController extends Controller
      */
     public function show(Penjualan $penjualan)
     {
-        //
+        return $this->responseFactory->view("penjualan.show", [
+            "penjualan" => $penjualan
+                ->load([
+                    "items" => function (HasMany $hasMany) {
+                        $hasMany
+                            ->select("*")
+                            ->selectRaw("harga_satuan * jumlah AS subtotal");
+                    },
+                    "items.barang"
+                ]),
+            "total_harga_penjualan" => $penjualan->items()->sum(DB::raw("harga_satuan * jumlah"))
+        ]);
     }
 
     /**

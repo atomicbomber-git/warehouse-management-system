@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PrintLaporanKeuanganController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/LaporanKeuangan.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/print-laporan-keuangan/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/LaporanKeuanganIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/LaporanKeuanganIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/laporan-keuangan-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/laporan-keuangan-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +188,9 @@
       <workItem from="1598078375618" duration="599000" />
       <workItem from="1598087914102" duration="5216000" />
       <workItem from="1598099858486" duration="10657000" />
-      <workItem from="1598146035524" duration="27341000" />
+      <workItem from="1598146035524" duration="30210000" />
+      <workItem from="1598188471815" duration="1205000" />
+      <workItem from="1598194129724" duration="102000" />
     </task>
     <servers />
   </component>
@@ -264,6 +257,10 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="633" y="414" width="644" height="220" key="ComposerInitDialogKey/0.0.1920.1053@0.0.1920.1053" timestamp="1597882563088" />
+    <state x="587" y="89" width="736" height="870" key="Diagram.Print.Preview.Dialog" timestamp="1598184479369">
+      <screen x="0" y="0" width="1920" height="1053" />
+    </state>
+    <state x="587" y="89" width="736" height="870" key="Diagram.Print.Preview.Dialog/0.0.1920.1053@0.0.1920.1053" timestamp="1598184479369" />
     <state x="637" y="169" width="636" height="710" key="FileChooserDialogImpl" timestamp="1598175943007">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
@@ -292,11 +289,11 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="221" y="0" width="1457" height="1053" key="SettingsEditor/0.0.1920.1053@0.0.1920.1053" timestamp="1598180481650" />
-    <state x="553" y="134" width="930" height="786" key="StructurePopup" timestamp="1598160508674">
+    <state x="553" y="134" width="930" height="786" key="StructurePopup" timestamp="1598183755204">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="393" y="94" width="849" height="554" key="StructurePopup/0.0.1366.742@0.0.1366.742" timestamp="1598089373921" />
-    <state x="553" y="134" width="930" height="786" key="StructurePopup/0.0.1920.1053@0.0.1920.1053" timestamp="1598160508674" />
+    <state x="553" y="134" width="930" height="786" key="StructurePopup/0.0.1920.1053@0.0.1920.1053" timestamp="1598183755204" />
     <state x="562" y="244" width="786" height="560" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1598166098186">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
@@ -310,14 +307,14 @@
     </state>
     <state x="383" y="82" width="672" height="606" key="find.popup/0.0.1366.742@0.0.1366.742" timestamp="1598092962687" />
     <state x="539" y="117" width="842" height="816" key="find.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598170368561" />
-    <state x="455" y="232" width="1009" height="1469" key="run.anything.popup" timestamp="1598182002232">
+    <state x="455" y="232" width="1009" height="1469" key="run.anything.popup" timestamp="1598188473395">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
-    <state x="455" y="232" width="1009" height="1469" key="run.anything.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598182002232" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1598181830473">
+    <state x="455" y="232" width="1009" height="1469" key="run.anything.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598188473395" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1598188475712">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="322" y="0" width="718" height="1036" key="search.everywhere.popup/0.0.1366.742@0.0.1366.742" timestamp="1598093105349" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598181830473" />
+    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598188475712" />
   </component>
 </project>

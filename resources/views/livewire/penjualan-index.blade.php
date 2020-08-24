@@ -4,7 +4,9 @@
     </h1>
 
     <div class="d-flex justify-content-end py-3">
-        <a href="{{ route("penjualan.create") }}" class="btn btn-primary">
+        <a href="{{ route("penjualan.create") }}"
+           class="btn btn-primary"
+        >
             Tambah
         </a>
     </div>
@@ -16,8 +18,8 @@
             <table class="table table-sm table-striped table-hover">
                 <thead class="thead-light">
                 <tr>
-                    <th> # </th>
-                    <th> Tanggal Penjualan </th>
+                    <th> #</th>
+                    <th> Tanggal Penjualan</th>
                     <th class="text-center"> {{ __("app.actions")  }} </th>
                 </tr>
                 </thead>
@@ -28,6 +30,12 @@
                         <td> {{ $penjualans->firstItem() + $loop->index }} </td>
                         <td> {{ $penjualan->tanggal_penjualan }} </td>
                         <td class="text-center">
+                            <a href="{{ route("penjualan.show", $penjualan) }}"
+                               class="btn btn-primary btn-sm"
+                            >
+                                Lihat
+                            </a>
+
                             @can(\App\Providers\AuthServiceProvider::DELETE_ANY_PENJUALAN)
                                 <button
                                         x-data="{}"
