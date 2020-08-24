@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Facades\Formatter;
 use App\Providers\AuthServiceProvider;
 use App\Stock;
 use Illuminate\Contracts\Routing\ResponseFactory;
@@ -13,7 +14,6 @@ class StockGroupedByBarangController extends Controller
 
     public function __construct(ResponseFactory $responseFactory)
     {
-
         $this->responseFactory = $responseFactory;
     }
 

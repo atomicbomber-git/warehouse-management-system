@@ -6,7 +6,6 @@ namespace App\Support;
 
 use Carbon\Carbon;
 use Illuminate\Support\DateFactory;
-use Illuminate\Support\Facades\Date;
 
 class Formatter
 {

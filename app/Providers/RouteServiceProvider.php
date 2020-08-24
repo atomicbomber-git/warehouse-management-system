@@ -31,7 +31,7 @@ class RouteServiceProvider extends ServiceProvider
                 return route("user.index");
             case UserLevel::PEGAWAI:
             default:
-                return route("home");
+                return route("penjualan.index");
         }
     }
 
