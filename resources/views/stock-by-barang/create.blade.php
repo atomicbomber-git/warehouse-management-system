@@ -3,7 +3,7 @@
 @section("content")
     <h1 class="feature-title">
         <a href="{{ route("stock-grouped-by-barang.index") }}">
-            Stock per Barang
+            Stok per Barang
         </a>
 
         /

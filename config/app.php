@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => 'Aplikasi Manajemen Gudang',
+    'name' => 'Sistem Informasi Stok Gudang',
 
     /*
     |--------------------------------------------------------------------------

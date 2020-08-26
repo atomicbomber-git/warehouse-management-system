@@ -28,7 +28,7 @@
     @can(\App\Providers\AuthServiceProvider::MANAGE_ANY_STOCK)
         <a class="text-decoration-none d-block {{ Route::is("stock-grouped-by-barang.*", "stock-by-barang.*") ? "text-primary" : "text-dark"  }}"
            href="{{ route("stock-grouped-by-barang.index") }}">
-            Stock per Barang
+            Stok per Barang
         </a>
     @endcan
 

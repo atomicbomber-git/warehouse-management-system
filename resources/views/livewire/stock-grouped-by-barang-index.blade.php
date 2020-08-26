@@ -1,6 +1,6 @@
 <div>
     <h1 class="feature-title">
-        Stock per Barang
+        Stok per Barang
     </h1>
 
     <x-messages></x-messages>
