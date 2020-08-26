@@ -11,6 +11,8 @@
         Pengeluaran
     </h1>
 
+    <x-messages></x-messages>
+
     <div class="card">
         <div class="card-body">
             <form action="{{ route("stock-by-barang.pengeluaran.store", $stock) }}"
@@ -22,6 +24,7 @@
                 <div class="form-group">
                     <label for="jumlah_awal"> Jumlah Awal: </label>
                     <input
+                            disabled
                             value="{{ $stock->jumlah }}"
                             id="jumlah_awal"
                             type="text"

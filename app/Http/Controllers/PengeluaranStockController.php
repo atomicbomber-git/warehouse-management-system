@@ -74,14 +74,12 @@ class PengeluaranStockController extends Controller
 
         DB::beginTransaction();
 
-        $inventory->returnStock($stock, $data["jumlah_dikeluarkan"]);
-
         switch ($data["alasan"]) {
             case AlasanTransaksi::PENGEMBALIAN:
-                $inventory->returnStock($stock);
+                $inventory->returnStock($stock, $data["jumlah_dikeluarkan"]);
                 break;
             case AlasanTransaksi::PEMBUANGAN:
-                $inventory->throwAwayStock($stock);
+                $inventory->throwAwayStock($stock, $data["jumlah_dikeluarkan"]);
                 break;
         }
 
