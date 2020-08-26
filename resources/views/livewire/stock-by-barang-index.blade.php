@@ -34,6 +34,7 @@
                         <th> # </th>
                         <th> Tanggal Masuk </th>
                         <th> Tanggal Kadaluarsa </th>
+                        <th class="text-center"> Bisa Dikembalikan </th>
                         <th style="width: 200px"> Pemasok </th>
                         <th class="text-right"> Jumlah </th>
                         <th class="text-right"> Harga Satuan </th>
@@ -54,6 +55,17 @@
                                 @if($stock->has_alert)
                                     <span class="badge badge-pill badge-danger">
                                         Hampir Kadaluarsa
+                                    </span>
+                                @endif
+                            </td>
+                            <td class="text-center">
+                                @if($stock->bisa_dikembalikan)
+                                    <span class="badge badge-pill badge-success">
+                                        Ya
+                                    </span>
+                                @else
+                                    <span class="badge badge-pill badge-danger">
+                                        Tidak
                                     </span>
                                 @endif
                             </td>

@@ -23,6 +23,20 @@ class PengeluaranStockController extends Controller
         $this->responseFactory = $responseFactory;
     }
 
+    public function getReasonTypes(Stock $stock)
+    {
+        if ($stock->bisa_dikembalikan) {
+            return [
+                AlasanTransaksi::PEMBUANGAN => "Pembuangan",
+                AlasanTransaksi::PENGEMBALIAN => "Pengembalian",
+            ];
+        } else {
+            return [
+                AlasanTransaksi::PEMBUANGAN => "Pembuangan",
+            ];
+        }
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -36,10 +50,7 @@ class PengeluaranStockController extends Controller
                 ->withJumlah()
                 ->firstOrFail(),
 
-            "reason_types" => [
-                AlasanTransaksi::PEMBUANGAN => "Pembuangan",
-                AlasanTransaksi::PENGEMBALIAN => "Pengembalian",
-            ]
+            "reason_types" => $this->getReasonTypes($stock)
         ]);
     }
 
@@ -57,18 +68,11 @@ class PengeluaranStockController extends Controller
             ->value("jumlah") ?? 0;
 
         $data = $validatorFactory->make($request->all(), [
-            "alasan" => ["required", Rule::in([
-                AlasanTransaksi::PERBAIKAN,
-                AlasanTransaksi::PEMBUANGAN,
-                AlasanTransaksi::PENGEMBALIAN,
-            ])],
+            "alasan" => ["required", Rule::in($this->getReasonTypes($stock))],
 
             "jumlah_dikeluarkan" => ["required", "numeric", "gte:0"],
-        ])->sometimes("jumlah_dikeluarkan", ["lte:{$jumlahStockAkhir}"], function ($attributes) {
-            return in_array($attributes->alasan, [
-                AlasanTransaksi::PEMBUANGAN,
-                AlasanTransaksi::PENGEMBALIAN,
-            ]);
+        ])->sometimes("jumlah_dikeluarkan", ["lte:{$jumlahStockAkhir}"], function ($attributes) use ($stock) {
+            return in_array($attributes->alasan, $this->getReasonTypes($stock));
         })->validate();
 
         DB::beginTransaction();

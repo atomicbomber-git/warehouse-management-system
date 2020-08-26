@@ -19,7 +19,6 @@ class StockByBarangController extends Controller
 
     public function __construct(ResponseFactory $responseFactory)
     {
-
         $this->responseFactory = $responseFactory;
     }
 
@@ -63,6 +62,7 @@ class StockByBarangController extends Controller
             "tanggal_kadaluarsa" => ["required", "date"],
             "jumlah" => ["required", "numeric", "gte:1"],
             "harga_satuan" => ["required", "numeric", "gte:0"],
+            "bisa_dikembalikan" => ["required", "boolean"],
         ]);
 
         $inventory->purchaseBarang($barang, $data);

@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="jumlah_dikeluarkan"> Jumlah Revisi: </label>
+                    <label for="jumlah_dikeluarkan"> Jumlah Pengembalian: </label>
                     <input
                             id="jumlah_dikeluarkan"
                             type="text"
