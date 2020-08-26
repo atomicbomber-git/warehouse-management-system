@@ -10,6 +10,16 @@ class StockGroupedByBarangIndex extends Component
 {
     use WithPagination;
 
+    /**
+     * @var false|mixed
+     */
+    public $inGuestMode;
+
+    public function mount($inGuestMode = false)
+    {
+        $this->inGuestMode = $inGuestMode;
+    }
+
     public function render()
     {
         return view('livewire.stock-grouped-by-barang-index', [

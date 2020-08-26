@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => 'Sistem Informasi Stok Gudang',
+    'name' => 'Sistem Informasi Stok Restoran',
 
     /*
     |--------------------------------------------------------------------------

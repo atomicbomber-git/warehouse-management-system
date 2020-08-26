@@ -18,14 +18,17 @@ class StockByBarangIndex extends Component
     use WithPagination;
 
     public $barangId;
+    public $inGuestMode;
 
     protected $listeners = [
         "stock:delete" => "deleteStock"
     ];
 
-    public function mount($barangId)
+
+    public function mount($barangId, $inGuestMode = false)
     {
         $this->barangId = $barangId;
+        $this->inGuestMode = $inGuestMode;
     }
 
     public function deleteStock($stockId, Inventory $inventory)

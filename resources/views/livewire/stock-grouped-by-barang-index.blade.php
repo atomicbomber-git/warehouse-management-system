@@ -27,18 +27,26 @@
                                 {{ $barang->nama }}
                                 @if($barang->has_alert)
                                     <span class="badge badge-pill badge-danger">
-                                        Stock Hampir Habis / Habis
+                                        Stok Hampir Habis / Habis
                                     </span>
                                 @endif
                             </td>
                             <td> {{ $barang->satuan }} </td>
                             <td class="text-right"> {{ \Facades\App\Support\Formatter::number($barang->stock) }} </td>
                             <td class="text-center">
-                                <a
-                                        class="btn btn-primary btn-sm"
-                                        href="{{ route("stock-grouped-by-barang.stock-by-barang.index", $barang) }}">
-                                    Stock
-                                </a>
+                                @if(! $inGuestMode)
+                                    <a
+                                            class="btn btn-primary btn-sm"
+                                            href="{{ route("stock-grouped-by-barang.stock-by-barang.index", $barang) }}">
+                                        Stok
+                                    </a>
+                                @else
+                                    <a
+                                            class="btn btn-primary btn-sm"
+                                            href="{{ route("login", ["barang_id" => $barang->id]) }}">
+                                        Stok
+                                    </a>
+                                @endif
                             </td>
                         </tr>
                     @endforeach

@@ -1,6 +1,6 @@
 <div>
     <h1 class="feature-title">
-        Laporan Keuangan
+        Rekap Keuangan
     </h1>
 
     <div class="py-3">

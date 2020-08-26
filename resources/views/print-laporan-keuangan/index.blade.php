@@ -29,14 +29,14 @@
 
     <style>@page { size: A4 }</style>
 
-    <title> Laporan Keuangan </title>
+    <title> REKAP KEUANGAN </title>
 </head>
 <body class="A4">
 
 @foreach ($laporan_pages as $laporan_page)
     <section class="sheet padding-10mm">
         @if($loop->first)
-            <h1 style="text-align: center"> LAPORAN KEUANGAN </h1>
+            <h1 style="text-align: center"> REKAP KEUANGAN </h1>
 
             <h4 style="text-align: center; text-transform: uppercase">
                 @if($filterType == \App\Repositories\LaporanKeuangan::FILTER_TYPE_DAY)

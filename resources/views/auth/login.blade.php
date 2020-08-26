@@ -56,4 +56,17 @@
             </form>
         </div>
     </div>
+
+    <div class="mt-3">
+        @if(request()->query("barang_id") === null)
+            <livewire:stock-grouped-by-barang-index
+                    in_guest_mode="true"
+            />
+        @else
+            @livewire("stock-by-barang-index", [
+                "barangId" =>  request()->query("barang_id"),
+                "inGuestMode" => true,
+            ])
+        @endif
+    </div>
 @endsection

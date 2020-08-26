@@ -42,7 +42,7 @@
     @can(\App\Providers\AuthServiceProvider::VIEW_LAPORAN_KEUANGAN)
         <a class="text-decoration-none d-block {{ Route::is("laporan-keuangan.*", "saldo-awal.*", "print-laporan-keuangan.*") ? "text-primary" : "text-dark"  }}"
            href="{{ route("laporan-keuangan.index") }}">
-            Laporan Keuangan
+            Rekap Keuangan
         </a>
     @endcan
 </div>

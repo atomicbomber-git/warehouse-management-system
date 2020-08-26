@@ -6,6 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StockGroupedByBarangController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StockGroupedByBarangController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/StockByBarangIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/StockByBarangIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/StockGroupedByBarangIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/StockGroupedByBarangIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/laporan-keuangan-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/laporan-keuangan-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stock-by-barang-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stock-by-barang-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stock-grouped-by-barang-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stock-grouped-by-barang-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/print-laporan-keuangan/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/print-laporan-keuangan/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,10 +307,10 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="221" y="0" width="1457" height="1053" key="SettingsEditor/0.0.1920.1053@0.0.1920.1053" timestamp="1598180481650" />
-    <state x="553" y="134" width="930" height="786" key="StructurePopup" timestamp="1598183755204">
-      <screen x="0" y="0" width="1920" height="1053" />
+    <state x="393" y="94" width="849" height="554" key="StructurePopup" timestamp="1598413131918">
+      <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state x="393" y="94" width="849" height="554" key="StructurePopup/0.0.1366.742@0.0.1366.742" timestamp="1598089373921" />
+    <state x="393" y="94" width="849" height="554" key="StructurePopup/0.0.1366.742@0.0.1366.742" timestamp="1598413131918" />
     <state x="553" y="134" width="930" height="786" key="StructurePopup/0.0.1920.1053@0.0.1920.1053" timestamp="1598183755204" />
     <state x="562" y="244" width="786" height="560" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1598166098186">
       <screen x="0" y="0" width="1920" height="1053" />
@@ -315,14 +325,15 @@
     </state>
     <state x="383" y="82" width="672" height="606" key="find.popup/0.0.1366.742@0.0.1366.742" timestamp="1598092962687" />
     <state x="539" y="117" width="842" height="816" key="find.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598170368561" />
-    <state x="455" y="232" width="1009" height="1469" key="run.anything.popup" timestamp="1598188473395">
-      <screen x="0" y="0" width="1920" height="1053" />
+    <state x="324" y="163" width="718" height="1036" key="run.anything.popup" timestamp="1598413834390">
+      <screen x="0" y="0" width="1366" height="742" />
     </state>
+    <state x="324" y="163" width="718" height="1036" key="run.anything.popup/0.0.1366.742@0.0.1366.742" timestamp="1598413834390" />
     <state x="455" y="232" width="1009" height="1469" key="run.anything.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598188473395" />
-    <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup" timestamp="1598275842712">
-      <screen x="0" y="0" width="1920" height="1053" />
+    <state x="322" y="0" width="718" height="1036" key="search.everywhere.popup" timestamp="1598413891485">
+      <screen x="0" y="0" width="1366" height="742" />
     </state>
-    <state x="322" y="0" width="718" height="1036" key="search.everywhere.popup/0.0.1366.742@0.0.1366.742" timestamp="1598093105349" />
+    <state x="322" y="0" width="718" height="1036" key="search.everywhere.popup/0.0.1366.742@0.0.1366.742" timestamp="1598413891485" />
     <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598275842712" />
   </component>
 </project>

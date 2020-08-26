@@ -24,7 +24,6 @@ class StockGroupedByBarangController extends Controller
      */
     public function index()
     {
-        $this->authorize(AuthServiceProvider::MANAGE_ANY_STOCK);
         return $this->responseFactory->view("stock-grouped-by-barang.index");
     }
 
