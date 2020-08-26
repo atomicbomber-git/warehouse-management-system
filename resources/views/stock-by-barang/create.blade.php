@@ -133,8 +133,8 @@
                             class="form-control @error("bisa_dikembalikan") is-invalid @enderror"
                             name="bisa_dikembalikan"
                     >
-                        <option {{ old("bisa_dikembalikan") == 0 ? "selected" : ""  }} value="0"> Ya </option>
-                        <option {{ old("bisa_dikembalikan") == 1 ? "selected" : ""  }} value="1"> Tidak </option>
+                        <option {{ old("bisa_dikembalikan") == 1 ? "selected" : ""  }} value="0"> Ya </option>
+                        <option {{ old("bisa_dikembalikan") == 0 ? "selected" : ""  }} value="1"> Tidak </option>
                     </select>
                     @error("bisa_dikembalikan")
                     <span class="invalid-feedback">

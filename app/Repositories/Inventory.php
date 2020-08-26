@@ -17,6 +17,8 @@ class Inventory
     {
         DB::beginTransaction();
 
+        dd($data);
+
         /** @var Stock $stock */
         $stock = $barang->stocks()->create(Arr::except($data, "jumlah"));
 
