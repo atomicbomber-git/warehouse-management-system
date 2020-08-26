@@ -68,12 +68,9 @@ class PengeluaranStockController extends Controller
             ->value("jumlah") ?? 0;
 
         $data = $validatorFactory->make($request->all(), [
-            "alasan" => ["required", Rule::in($this->getReasonTypes($stock))],
-
-            "jumlah_dikeluarkan" => ["required", "numeric", "gte:0"],
-        ])->sometimes("jumlah_dikeluarkan", ["lte:{$jumlahStockAkhir}"], function ($attributes) use ($stock) {
-            return in_array($attributes->alasan, $this->getReasonTypes($stock));
-        })->validate();
+            "alasan" => ["required", Rule::in(array_keys($this->getReasonTypes($stock)))],
+            "jumlah_dikeluarkan" => ["required", "numeric", "gte:0", "lte:{$jumlahStockAkhir}"],
+        ])->validate();
 
         DB::beginTransaction();
 
