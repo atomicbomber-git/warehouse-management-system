@@ -35,7 +35,7 @@
     @can(\App\Providers\AuthServiceProvider::MANAGE_ANY_PENJUALAN)
         <a class="text-decoration-none d-block {{ Route::is("penjualan.*") ? "text-primary" : "text-dark"  }}"
            href="{{ route("penjualan.index") }}">
-            Penjualan
+            Rekap Pengeluaran
         </a>
     @endcan
 

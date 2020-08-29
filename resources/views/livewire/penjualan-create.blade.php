@@ -1,7 +1,7 @@
 <div>
     <h1 class="feature-title">
         <a href="{{ route("penjualan.index") }}">
-            Penjualan
+            Rekap Pengeluaran
         </a>
 
         /
@@ -19,12 +19,12 @@
         <div class="card-body">
             <form wire:submit.prevent="submit">
                 <div class="form-group">
-                    <label for="tanggal_penjualan"> Tanggal Penjualan: </label>
+                    <label for="tanggal_penjualan"> Tanggal Pengeluaran: </label>
                     <input
                             wire:model="tanggal_penjualan"
                             id="tanggal_penjualan"
                             type="date"
-                            placeholder="Tanggal Penjualan"
+                            placeholder="Tanggal Pengeluaran"
                             class="form-control @error("tanggal_penjualan") is-invalid @enderror"
                             name="tanggal_penjualan"
                             value="{{ old("tanggal_penjualan") }}"

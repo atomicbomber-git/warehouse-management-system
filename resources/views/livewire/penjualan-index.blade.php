@@ -1,6 +1,6 @@
 <div>
     <h1 class="feature-title">
-        Penjualan
+        Rekap Pengeluaran
     </h1>
 
     <div class="d-flex justify-content-end py-3">

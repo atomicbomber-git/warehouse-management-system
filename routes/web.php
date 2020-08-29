@@ -53,8 +53,13 @@ Route::resource("barang", class_basename(BarangController::class))
 Route::resource("pemasok", class_basename(PemasokController::class))
     ->except(["show", "destroy"]);
 
-Route::resource("penjualan", class_basename(PenjualanController::class))
-    ->except(["destroy"]);
+Route::resource("pengeluaran", class_basename(PenjualanController::class))
+    ->except(["destroy"])
+    ->names([
+        "create" => "penjualan.create",
+        "show" => "penjualan.show",
+        "index" => "penjualan.index",
+    ]);
 
 Route::resource("stock-grouped-by-barang", class_basename(StockGroupedByBarangController::class))
     ->parameter("stock-grouped-by-barang", "barang")

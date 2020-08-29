@@ -3,7 +3,7 @@
 @section("content")
     <h1 class="feature-title">
         <a href="{{ route("penjualan.index") }}">
-            Penjualan
+            Rekap Pengeluaran
         </a>
 
         /
@@ -14,7 +14,7 @@
     <div class="card">
         <div class="card-body">
             <dl>
-                <dt> Tanggal Penjualan </dt>
+                <dt> Tanggal Pengeluaran </dt>
                 <dd> {{ $penjualan->tanggal_penjualan }} </dd>
 
                 <dt> Daftar Item </dt>
@@ -57,7 +57,7 @@
                     @else
                         <div class="alert alert-warning">
                             <i class="fas fa-exclamation-triangle"></i>
-                            Tidak terdapat item penjualan sama sekali
+                            Tidak terdapat item pengeluaran sama sekali
                         </div>
                     @endif
                 </dd>
