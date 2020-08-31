@@ -55,6 +55,7 @@ Route::resource("pemasok", class_basename(PemasokController::class))
 
 Route::resource("pengeluaran", class_basename(PenjualanController::class))
     ->except(["destroy"])
+    ->parameter("pengeluaran", "penjualan")
     ->names([
         "create" => "penjualan.create",
         "show" => "penjualan.show",

@@ -46,8 +46,6 @@ class PenjualanCreate extends Component
             "tanggal_penjualan" => $this->tanggal_penjualan,
         ]);
 
-        DB::beginTransaction();
-
         foreach ($data["items"] as $barangId => $item) {
             /** @var ItemPenjualan $itemPenjualan */
             $itemPenjualan = $penjualan->items()->create([
