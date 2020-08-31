@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_26_110003_add_bisa_dikembalikan_to_stock.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PengeluaranStockController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PengeluaranStockController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StockByBarangController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StockByBarangController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stock-by-barang-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stock-by-barang-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pengeluaran-stock/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pengeluaran-stock/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/stock-by-barang/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/stock-by-barang/create.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -160,6 +152,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -205,6 +198,7 @@
       <workItem from="1598272720024" duration="191000" />
       <workItem from="1598272923331" duration="10000" />
       <workItem from="1598275830529" duration="1893000" />
+      <workItem from="1598800554403" duration="46000" />
     </task>
     <servers />
   </component>
