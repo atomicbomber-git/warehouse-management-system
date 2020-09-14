@@ -13,7 +13,7 @@ class SaldoAwalSeeder extends Seeder
     public function run()
     {
         SaldoAwal::query()->create([
-            "jumlah" => 1000000,
+            "jumlah" => 0,
         ]);
     }
 }
