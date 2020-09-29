@@ -30,6 +30,7 @@ class BarangSearchController extends Controller
             ->when($request->query("term"), function (Builder $builder, $term) {
                 $builder->where("nama", "like", "%$term%");
             })
+            ->where("disembunyikan", 0)
             ->orderBy("nama")
             ->paginate();
 

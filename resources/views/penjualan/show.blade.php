@@ -14,8 +14,8 @@
     <div class="card">
         <div class="card-body">
             <dl>
-                <dt> Tanggal Pengeluaran </dt>
-                <dd> {{ $penjualan->tanggal_penjualan }} </dd>
+                <dt> Waktu Pengeluaran </dt>
+                <dd> {{ $penjualan->waktu_penjualan }} </dd>
 
                 <dt> Daftar Item </dt>
                 <dd>

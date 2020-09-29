@@ -19,17 +19,17 @@
         <div class="card-body">
             <form wire:submit.prevent="submit">
                 <div class="form-group">
-                    <label for="tanggal_penjualan"> Tanggal Pengeluaran: </label>
+                    <label for="waktu_penjualan"> Waktu Pengeluaran: </label>
                     <input
-                            wire:model="tanggal_penjualan"
-                            id="tanggal_penjualan"
-                            type="date"
-                            placeholder="Tanggal Pengeluaran"
-                            class="form-control @error("tanggal_penjualan") is-invalid @enderror"
-                            name="tanggal_penjualan"
-                            value="{{ old("tanggal_penjualan") }}"
+                            wire:model.lazy="waktu_penjualan"
+                            id="waktu_penjualan"
+                            type="datetime-local"
+                            placeholder="Waktu Pengeluaran"
+                            class="form-control @error("waktu_penjualan") is-invalid @enderror"
+                            name="waktu_penjualan"
+                            value="{{ old("waktu_penjualan") }}"
                     />
-                    @error("tanggal_penjualan")
+                    @error("waktu_penjualan")
                     <span class="invalid-feedback">
                         {{ $message }}
                     </span>
@@ -63,7 +63,7 @@
                                             <input
                                                     id="jumlah"
                                                     wire:key="items.{{ $barangId }}.jumlah"
-                                                    wire:model="items.{{ $barangId }}.jumlah"
+                                                    wire:model.lazy="items.{{ $barangId }}.jumlah"
                                                     type="number"
                                                     placeholder="Jumlah"
                                                     class="form-control form-control-sm text-right @error("items.{$barangId}.jumlah") is-invalid @enderror"
@@ -81,7 +81,7 @@
                                             <input
                                                     id="harga_jual"
                                                     wire:key="items.{{ $barangId }}.harga_jual"
-                                                    wire:model="items.{{ $barangId }}.harga_jual"
+                                                    wire:model.lazy="items.{{ $barangId }}.harga_jual"
                                                     type="number"
                                                     placeholder="Harga Jual"
                                                     class="form-control form-control-sm text-right @error("items.{$barangId}.harga_jual") is-invalid @enderror"
@@ -155,8 +155,8 @@
                     </select>
                     @error("barang_id")
                     <span class="invalid-feedback">
-                    {{ $message }}
-                </span>
+                        {{ $message }}
+                    </span>
                     @enderror
 
                     @push("scripts")

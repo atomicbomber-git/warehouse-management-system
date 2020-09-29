@@ -19,7 +19,6 @@ class BarangController extends Controller
 
     public function __construct(ResponseFactory $responseFactory)
     {
-
         $this->responseFactory = $responseFactory;
     }
 
@@ -102,8 +101,10 @@ class BarangController extends Controller
             "nama" => ["required", "string", Rule::unique(Barang::class)->ignoreModel($barang)],
             "satuan" => ["required", "string"],
             "harga_jual" => ["required", "numeric", "gte:0"],
+            "disembunyikan" => ["nullable", Rule::in(["on"])]
         ]);
 
+        $data["disembunyikan"] = isset($data["disembunyikan"]);
         $barang->update($data);
 
         SessionHelper::flashMessage(

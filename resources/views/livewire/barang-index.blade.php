@@ -22,6 +22,7 @@
                         <th> Nama </th>
                         <th> Satuan </th>
                         <th class="text-right"> Harga Jual </th>
+                        <th class="text-center"> Disembunyikan? </th>
                         <th class="text-center"> @lang("app.actions") </th>
                     </tr>
                     </thead>
@@ -33,6 +34,17 @@
                             <td> {{ $barang->nama }} </td>
                             <td> {{ $barang->satuan }} </td>
                             <td class="text-right"> {{ Facades\App\Support\Formatter::currency($barang->harga_jual) }} </td>
+                            <td class="text-center">
+                                @if($barang->disembunyikan)
+                                    <span class="badge badge-pill badge-danger">
+                                        Disembunyikan
+                                    </span>
+                                @else
+                                    <span class="badge badge-pill badge-success">
+                                        Ditampilkan
+                                    </span>
+                                @endif
+                            </td>
                             <td class="text-center">
                                 <a href="{{ route("barang.edit", $barang)}}" class="btn btn-primary btn-sm">
                                     Ubah

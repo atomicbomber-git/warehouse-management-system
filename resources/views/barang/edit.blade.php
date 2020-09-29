@@ -72,9 +72,21 @@
                     @enderror
                 </div>
 
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox"
+                           name="disembunyikan"
+                           class="custom-control-input"
+                           id="disembunyikan"
+                           @if($barang->disembunyikan) checked @endif
+                    >
+                    <label class="custom-control-label"
+                           for="disembunyikan"
+                    > Sembunyikan Barang Ini? </label>
+                </div>
+
                 <div class="d-flex justify-content-end">
                     <button class="btn btn-primary">
-                        Tambah
+                        Ubah
                     </button>
                 </div>
             </form>

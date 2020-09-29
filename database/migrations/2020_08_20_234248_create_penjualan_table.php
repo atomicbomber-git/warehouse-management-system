@@ -16,7 +16,7 @@ class CreatePenjualanTable extends Migration
         Schema::create('penjualan', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id')->index();
-            $table->date('tanggal_penjualan');
+            $table->date('waktu_penjualan');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
         });

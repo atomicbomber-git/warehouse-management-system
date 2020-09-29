@@ -49,7 +49,7 @@ class PenjualanIndex extends Component
     {
         return view('livewire.penjualan-index', [
             "penjualans" => Penjualan::query()
-                ->orderByDesc("tanggal_penjualan")
+                ->orderByDesc("waktu_penjualan")
                 ->paginate()
         ]);
     }

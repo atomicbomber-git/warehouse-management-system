@@ -9,7 +9,6 @@ use App\Exceptions\QuantityExceedsCurrentStockException;
 use App\ItemPenjualan;
 use App\Penjualan;
 use App\Repositories\Inventory;
-use App\Stock;
 use App\Support\SessionHelper;
 use Exception;
 use Illuminate\Support\Facades\DB;
@@ -19,7 +18,7 @@ use Throwable;
 
 class PenjualanCreate extends Component
 {
-    public $tanggal_penjualan;
+    public $waktu_penjualan;
     public $items;
     public $selectedBarangId;
 
@@ -30,7 +29,7 @@ class PenjualanCreate extends Component
 
     public function mount()
     {
-        $this->tanggal_penjualan = now()->format("Y-m-d");
+        $this->waktu_penjualan = now()->format("Y-m-d\TH:i");
         $this->items = [];
     }
 
@@ -43,7 +42,7 @@ class PenjualanCreate extends Component
         /** @var Penjualan $penjualan */
         $penjualan = Penjualan::query()->create([
             "user_id" => auth()->id(),
-            "tanggal_penjualan" => $this->tanggal_penjualan,
+            "waktu_penjualan" => $this->waktu_penjualan,
         ]);
 
         foreach ($data["items"] as $barangId => $item) {
@@ -91,8 +90,13 @@ class PenjualanCreate extends Component
     public function getValidatedData(): array
     {
         return $this->validate([
+            "waktu_penjualan" => ["required", "date_format:Y-m-d\TH:i"],
             "items" => ["required", "array"],
-            "items.*.barang.id" => ["required", Rule::exists(Barang::class, "id")],
+            "items.*.barang.id" => [
+                "required",
+                Rule::exists(Barang::class, "id")
+                    ->where("disembunyikan", 0)
+            ],
             "items.*.harga_jual" => ["required", "numeric", "gte:0"],
             "items.*.jumlah" => [
                 "required",

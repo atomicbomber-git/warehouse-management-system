@@ -4,7 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="" />
+    <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_28_211614_seed_saldo_awal.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_28_211929_add_disembunyikan_field_to_barang.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_29_081200_change_tanggal_penjualan_to_waktu_penjualan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BarangController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BarangController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BarangSearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BarangSearchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PenjualanCreate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PenjualanCreate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/paper.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/paper.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js.LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js.LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/barang/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/barang/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/barang-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/barang-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/penjualan-create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/penjualan-create.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -144,9 +164,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="mariadb&#10;mysql" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Constants" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -163,11 +185,26 @@
       <recent name="$PROJECT_DIR$/resources/views/components" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.phpunit.xml">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <configuration name="prod" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="prod" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.prod" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -199,6 +236,7 @@
       <workItem from="1598272923331" duration="10000" />
       <workItem from="1598275830529" duration="1893000" />
       <workItem from="1598800554403" duration="46000" />
+      <workItem from="1601341452950" duration="1505000" />
     </task>
     <servers />
   </component>
@@ -225,9 +263,10 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="251" y="272" width="1596" height="490" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1597972844375" />
-    <state x="538" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597905714523">
-      <screen x="0" y="0" width="1920" height="1053" />
+    <state x="538" y="172" width="800" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601341852414">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="538" y="172" width="800" height="683" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601341852414" />
     <state x="538" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1597905714523" />
     <state x="474" y="61" width="877" height="720" key="#com.intellij.ide.actionMacro.EditMacrosDialog" timestamp="1598158214005">
       <screen x="0" y="0" width="1920" height="1053" />
@@ -273,21 +312,25 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="637" y="169" width="636" height="710" key="FileChooserDialogImpl/0.0.1920.1053@0.0.1920.1053" timestamp="1598233990115" />
-    <state width="1269" height="490" key="GridCell.Tab.0.bottom" timestamp="1598173346450">
-      <screen x="0" y="0" width="1920" height="1053" />
+    <state width="1870" height="556" key="GridCell.Tab.0.bottom" timestamp="1601302527318">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1870" height="556" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601302527318" />
     <state width="1269" height="490" key="GridCell.Tab.0.bottom/0.0.1920.1053@0.0.1920.1053" timestamp="1598173346450" />
-    <state width="1269" height="490" key="GridCell.Tab.0.center" timestamp="1598173346450">
-      <screen x="0" y="0" width="1920" height="1053" />
+    <state width="1870" height="556" key="GridCell.Tab.0.center" timestamp="1601302527318">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1870" height="556" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601302527318" />
     <state width="1269" height="490" key="GridCell.Tab.0.center/0.0.1920.1053@0.0.1920.1053" timestamp="1598173346450" />
-    <state width="1269" height="490" key="GridCell.Tab.0.left" timestamp="1598173346449">
-      <screen x="0" y="0" width="1920" height="1053" />
+    <state width="1870" height="556" key="GridCell.Tab.0.left" timestamp="1601302527318">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1870" height="556" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601302527318" />
     <state width="1269" height="490" key="GridCell.Tab.0.left/0.0.1920.1053@0.0.1920.1053" timestamp="1598173346449" />
-    <state width="1269" height="490" key="GridCell.Tab.0.right" timestamp="1598173346450">
-      <screen x="0" y="0" width="1920" height="1053" />
+    <state width="1870" height="556" key="GridCell.Tab.0.right" timestamp="1601302527318">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1870" height="556" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601302527318" />
     <state width="1269" height="490" key="GridCell.Tab.0.right/0.0.1920.1053@0.0.1920.1053" timestamp="1598173346450" />
     <state x="568" y="156" width="926" height="737" key="NewPhpClassDialog" timestamp="1598233406755">
       <screen x="0" y="0" width="1920" height="1053" />
@@ -297,11 +340,16 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="221" y="0" width="1457" height="1053" key="SettingsEditor/0.0.1920.1053@0.0.1920.1053" timestamp="1598180481650" />
-    <state x="393" y="94" width="849" height="554" key="StructurePopup" timestamp="1598413131918">
-      <screen x="0" y="0" width="1366" height="742" />
+    <state x="552" y="132" width="1194" height="777" key="StructurePopup" timestamp="1601342668397">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="393" y="94" width="849" height="554" key="StructurePopup/0.0.1366.742@0.0.1366.742" timestamp="1598413131918" />
+    <state x="552" y="132" width="1194" height="777" key="StructurePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1601342668397" />
     <state x="553" y="134" width="930" height="786" key="StructurePopup/0.0.1920.1053@0.0.1920.1053" timestamp="1598183755204" />
+    <state x="763" y="220" width="389" height="591" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1601302854978">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="763" y="220" width="389" height="591" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1601302854978" />
     <state x="562" y="244" width="786" height="560" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1598166098186">
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
@@ -315,15 +363,17 @@
     </state>
     <state x="383" y="82" width="672" height="606" key="find.popup/0.0.1366.742@0.0.1366.742" timestamp="1598092962687" />
     <state x="539" y="117" width="842" height="816" key="find.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598170368561" />
-    <state x="324" y="163" width="718" height="1036" key="run.anything.popup" timestamp="1598414779269">
-      <screen x="0" y="0" width="1366" height="742" />
+    <state x="455" y="228" width="1010" height="1453" key="run.anything.popup" timestamp="1601341765931">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="324" y="163" width="718" height="1036" key="run.anything.popup/0.0.1366.742@0.0.1366.742" timestamp="1598414779269" />
+    <state x="455" y="228" width="1010" height="1453" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601341765931" />
     <state x="455" y="232" width="1009" height="1469" key="run.anything.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598188473395" />
-    <state x="322" y="0" width="718" height="1036" key="search.everywhere.popup" timestamp="1598415187414">
-      <screen x="0" y="0" width="1366" height="742" />
+    <state x="453" y="0" width="1010" height="1453" key="search.everywhere.popup" timestamp="1601342633152">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="322" y="0" width="718" height="1036" key="search.everywhere.popup/0.0.1366.742@0.0.1366.742" timestamp="1598415187414" />
+    <state x="453" y="0" width="1010" height="1453" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601342633152" />
     <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598275842712" />
   </component>
 </project>

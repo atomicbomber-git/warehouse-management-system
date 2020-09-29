@@ -19,7 +19,7 @@
                 <thead class="thead-light">
                 <tr>
                     <th> #</th>
-                    <th> Tanggal Penjualan</th>
+                    <th> Waktu Penjualan</th>
                     <th class="text-center"> {{ __("app.actions")  }} </th>
                 </tr>
                 </thead>
@@ -28,7 +28,7 @@
                 @foreach ($penjualans as $penjualan)
                     <tr>
                         <td> {{ $penjualans->firstItem() + $loop->index }} </td>
-                        <td> {{ $penjualan->tanggal_penjualan }} </td>
+                        <td> {{ $penjualan->waktu_penjualan }} </td>
                         <td class="text-center">
                             <a href="{{ route("penjualan.show", $penjualan) }}"
                                class="btn btn-primary btn-sm"
