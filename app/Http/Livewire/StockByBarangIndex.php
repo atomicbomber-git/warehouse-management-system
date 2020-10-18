@@ -10,6 +10,7 @@ use App\Support\SessionHelper;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -19,16 +20,29 @@ class StockByBarangIndex extends Component
 
     public $barangId;
     public $inGuestMode;
+    public $filter;
+
+    const FILTER_SHOW_ONLY_EXPIRED_AND_RUN_OUT = "only-expired-and-run-out";
+    const FILTER_SHOW_ALL = "all";
+
+    const FILTER_NAMES = [
+        self::FILTER_SHOW_ONLY_EXPIRED_AND_RUN_OUT => "Mendekati Kadaluarsa / Habis",
+        self::FILTER_SHOW_ALL => "Semua",
+    ];
+
+    protected $updatesQueryString = [
+        "filter" => ["except" => "all"],
+    ];
 
     protected $listeners = [
         "stock:delete" => "deleteStock"
     ];
 
-
-    public function mount($barangId, $inGuestMode = false)
+    public function mount(Request $request, $barangId, $inGuestMode = false)
     {
         $this->barangId = $barangId;
         $this->inGuestMode = $inGuestMode;
+        $this->filter = $request->query("filter", self::FILTER_SHOW_ALL);
     }
 
     public function deleteStock($stockId, Inventory $inventory)
@@ -76,6 +90,7 @@ class StockByBarangIndex extends Component
     public function render()
     {
         return view('livewire.stock-by-barang-index', [
+            "filter_names" => self::FILTER_NAMES,
             "barang" => $this->getBarangProperty(),
             "stocks" => $this->getStocksProperty(),
         ]);

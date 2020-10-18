@@ -16,12 +16,33 @@
     </h1>
 
     @if(! $inGuestMode)
-        <div class="d-flex justify-content-end py-3">
+        <div class="d-flex justify-content-end my-3">
             <a href="{{ route("stock-grouped-by-barang.stock-by-barang.create", $barang) }}" class="btn btn-primary">
                 Tambah
             </a>
         </div>
     @endif
+
+    <div class="d-flex my-3">
+        <label for="filter" class="mr-2">
+            Filter:
+        </label>
+
+        <select
+                wire:model.lazy="filter"
+                class="form-control form-control-sm"
+                name="filter"
+                id="filter"
+        >
+            @foreach ($filter_names as $filter_id => $filter_name)
+                <option value="{{ $filter_id }}">
+                    {{ $filter_name }}
+                </option>
+            @endforeach
+        </select>
+    </div>
+
+
 
     <x-messages></x-messages>
 

@@ -27,9 +27,10 @@ class StockSeeder extends Seeder
 
         foreach ($pemasoks as $pemasok) {
             foreach ($barangs as $barang) {
-//                if (rand(0, 3) > 0) {
-//                    $this->seedNearKadaluarsa($inventory, $barang, $pemasok);
-//                }
+                if (rand(0, 3) > 0) {
+                    $this->seedNearKadaluarsa($inventory, $barang, $pemasok);
+                    continue;
+                }
 
                 $this->seedRegular($inventory, $barang, $pemasok);
             }

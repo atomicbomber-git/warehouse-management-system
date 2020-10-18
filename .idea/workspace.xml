@@ -5,25 +5,82 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764e5efa-5e53-4566-b391-57c8af4f768d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_28_211614_seed_saldo_awal.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_28_211929_add_disembunyikan_field_to_barang.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_09_29_081200_change_tanggal_penjualan_to_waktu_penjualan.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/akaunting.PrEzcg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/api_server.CAGSdA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/bk.SQwAAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/bpspkcom_erekom.T05kRg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/cai_logika_informatika.E3XEug.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/cai_logika_informatika_acceptance.A7lBXQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/civil_engineering_survey_app.NEQINQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/codeigniter_test.tj44Fg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/crud_generator_3000.KuK6Kw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/crud_test.85gLdg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/dcbr.D_UuAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/ddis.qvkuAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/dsc.tIUBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/edom.vW4vAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/es.rgwAAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/fomantic_ui_test.G7xIIg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/frms.chcwAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/galon_plus.6Ixx-w.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/gcbr.LFIwAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/grocery_marketplace.GcayLg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/informatika.o3RWdQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/informatika_newssite.tgwGVg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/inventory.XBmQhw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/laravel_and_testing.IgehKQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/laravel_blog_example.kxm5iw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/livewire_crud_experiment.0ALjZA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/lrea.otAyAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/marketplace_iklan.Q7Ip5g.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/masonite_experiment.wPfcrw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/mckms.-6EuBg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/mckms_testing.zE_dmA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/mikrotik_monitor.ZRrIUg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/mikrotik_monitoring_api.ONqYyg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/monica.-wNQwA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/opc.oq4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/passport_test.nyzZJQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/pbp.vrABAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/pdbb.NG00AA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/pdbp.Qm00AA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/pdis.Hm40AA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/pdpb.5m40AA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/penjadwalan.u9RH-g.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/personal_blog.QaqcIg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/phpmyadmin.q9h56A.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/radius.kmwOyA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/radius_admin.Yp19-Q.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/ris.HLkBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/scc.E7wBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/spring_experiment.b1VbZA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/surge.LneLBg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/symfony_experiment.IeOQkA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/testx.Jk6SBg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/tfdss.EoqSBg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/tgis.3Uo2AA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/tire_company_erp.SkQwfA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/vgt_test.bqvP9Q.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/vt_gis.0D7rzw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/warehouse.wzrviA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/warehouse_management_system.L89N_A.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/warehouse_ops.Nv-qtQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/wink.D7A3AA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/wordpress.ebP8NQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/wysiwyg.DQYGbA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/yajra_test.AJBe4Q.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/zgis.FwU5AA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a87a6a01-9192-4c40-9087-0905dba25416/storage_v2/_src_/schema/zgis_old._36fgw.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BarangController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BarangController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BarangSearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BarangSearchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PenjualanCreate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PenjualanCreate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/paper.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/paper.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js.LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js.LICENSE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/barang/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/barang/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/barang-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/barang-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/penjualan-create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/penjualan-create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/StockByBarangIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/StockByBarangIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/StockGroupedByBarangIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/StockGroupedByBarangIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/QueryBuilders/StockBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/QueryBuilders/StockBuilder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/StockSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/StockSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/stock-by-barang-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/stock-by-barang-index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +293,9 @@
       <workItem from="1598272923331" duration="10000" />
       <workItem from="1598275830529" duration="1893000" />
       <workItem from="1598800554403" duration="46000" />
-      <workItem from="1601341452950" duration="1505000" />
+      <workItem from="1601341452950" duration="4284000" />
+      <workItem from="1601377695113" duration="343000" />
+      <workItem from="1602549596677" duration="1131000" />
     </task>
     <servers />
   </component>
@@ -280,9 +339,10 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="644" y="135" width="621" height="778" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1598162669680" />
-    <state x="562" y="169" width="786" height="710" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598177339739">
-      <screen x="0" y="0" width="1920" height="1053" />
+    <state x="562" y="167" width="786" height="710" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601349570562">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="562" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601349570562" />
     <state x="562" y="169" width="786" height="710" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1598177339739" />
     <state x="692" y="239" width="525" height="570" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1598180340903">
       <screen x="0" y="0" width="1920" height="1053" />
@@ -358,10 +418,11 @@
       <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="590" y="0" width="729" height="1051" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1053@0.0.1920.1053" timestamp="1597888636415" />
-    <state x="539" y="117" width="842" height="816" key="find.popup" timestamp="1598170368561">
-      <screen x="0" y="0" width="1920" height="1053" />
+    <state x="539" y="116" width="842" height="806" key="find.popup" timestamp="1601343214508">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="383" y="82" width="672" height="606" key="find.popup/0.0.1366.742@0.0.1366.742" timestamp="1598092962687" />
+    <state x="539" y="116" width="842" height="806" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601343214508" />
     <state x="539" y="117" width="842" height="816" key="find.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598170368561" />
     <state x="455" y="228" width="1010" height="1453" key="run.anything.popup" timestamp="1601341765931">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -369,11 +430,11 @@
     <state x="324" y="163" width="718" height="1036" key="run.anything.popup/0.0.1366.742@0.0.1366.742" timestamp="1598414779269" />
     <state x="455" y="228" width="1010" height="1453" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601341765931" />
     <state x="455" y="232" width="1009" height="1469" key="run.anything.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598188473395" />
-    <state x="453" y="0" width="1010" height="1453" key="search.everywhere.popup" timestamp="1601342633152">
+    <state x="453" y="0" width="1010" height="1453" key="search.everywhere.popup" timestamp="1602549707299">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="322" y="0" width="718" height="1036" key="search.everywhere.popup/0.0.1366.742@0.0.1366.742" timestamp="1598415187414" />
-    <state x="453" y="0" width="1010" height="1453" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1601342633152" />
+    <state x="453" y="0" width="1010" height="1453" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602549707299" />
     <state x="453" y="0" width="1009" height="1470" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1598275842712" />
   </component>
 </project>
